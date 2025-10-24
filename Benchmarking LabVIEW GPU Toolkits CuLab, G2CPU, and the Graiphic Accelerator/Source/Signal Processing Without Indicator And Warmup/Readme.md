@@ -10,7 +10,7 @@ To keep the benchmark **fully transparent and reproducible**, these files are ho
 ### 1. G2CPU Benchmark VI  
 **File:** `G2CPU_Read_RF_BIN_quick_record_2020 Bench_all_exec_without_indicator_and_warmup.vi`  
 **Size:** ~30 MB  
-**Download:** <http://download2.graiphic.io/_Bench/G2CPU_Read_RF_BIN_quick_record_2020_Bench_all_exec_without_indicator_and_warmup.vi>
+**Download:** <http://download2.graiphic.io/_Bench/G2CPU_Read_RF_BIN_quick_record.vi>
 
 ---
 
