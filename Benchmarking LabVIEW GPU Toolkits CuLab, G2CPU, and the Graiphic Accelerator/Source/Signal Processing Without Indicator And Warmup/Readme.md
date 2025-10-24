@@ -10,7 +10,8 @@ To keep the benchmark **fully transparent and reproducible**, these files are ho
 ### 1. G2CPU Benchmark VI  
 **File:** `G2CPU Read RF BIN quick record_2020 Bench all exec without indicator and warmup.vi`  
 **Size:** ~30 MB  
-**Download:** [http://download2.graiphic.io/_Bench/G2CPU%20Read%20RF%20BIN%20quick%20record_2020%20Bench%20all%20exec%20without%20indicator%20and%20warmup.vi](http://download2.graiphic.io/_Bench/G2CPU%20Read%20RF%20BIN%20quick%20record_2020%20Bench%20all%20exec%20without%20indicator%20and%20warmup.vi)
+**Download:** [http://download2.graiphic.io/_Bench/G2CPU%20Read%20RF%20BIN%20quick%20record_2020%20Bench%20all%20exec%20without%20indicator%20and%20warmup.vi](http://download2.graiphic.io/_Bench/G2CPU%20Read%20RF%20BIN%20quick%20record_2020%20Bench%20all%20exec%20without%20indicator%20and%20warmup.vi)  
+*(If the download does not start automatically, please copy and paste the link into your browser.)*
 
 ---
 
@@ -18,7 +19,8 @@ To keep the benchmark **fully transparent and reproducible**, these files are ho
 **File:** `TEMP.BIN`  
 **Size:** ~2 GB  
 **Description:** Raw signal data used for the *Signal Processing Application (Test Bench 4)*.  
-**Download:** [http://download2.graiphic.io/_Bench/TEMP.BIN](http://download2.graiphic.io/_Bench/TEMP.BIN)
+**Download:** [http://download2.graiphic.io/_Bench/TEMP.BIN](http://download2.graiphic.io/_Bench/TEMP.BIN)  
+*(If the download does not start automatically, please copy and paste the link into your browser.)*
 
 ---
 
@@ -27,5 +29,5 @@ To keep the benchmark **fully transparent and reproducible**, these files are ho
 - All other `.vi` files are already included in this repository.  
 - Once downloaded, place both files in the same working directory as the existing VIs.
 
-For any question or support, visit our community forum:  
+For any questions or support, visit our community forum:  
 👉 [https://graiphic.io/support-community/](https://graiphic.io/support-community/)
