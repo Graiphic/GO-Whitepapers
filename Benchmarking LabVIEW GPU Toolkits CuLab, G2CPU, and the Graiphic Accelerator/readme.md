@@ -4,7 +4,7 @@
 Welcome to the **Graiphic Benchmarking Whitepaper Repository**, where we share the **methods, results, and LabVIEW sources** used to compare the main GPU acceleration toolkits for **LabVIEW**.
 
 This repository accompanies the official whitepaper:  
-👉 [**Benchmarking the Future: Comparing LabVIEW GPU Toolkits CuLab, G2CPU, and the Graiphic Accelerator (v1.0)**](./Benchmarking%20the%20Future%20Comparing%20LabVIEW%20GPU%20Toolkits%20CuLab%2C%20G2CPU%2C%20and%20the%20Graiphic%20Accelerator.1.0.pdf)
+👉 [**Benchmarking the Future: Comparing LabVIEW GPU Toolkits CuLab, G2CPU, and the Graiphic Accelerator (v1.1)**](./Benchmarking%20the%20Future%20Comparing%20LabVIEW%20GPU%20Toolkits%20CuLab%2C%20G2CPU%2C%20and%20the%20Graiphic%20Accelerator.1.1.pdf)
 
 ---
 
