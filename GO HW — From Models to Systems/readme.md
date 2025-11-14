@@ -1,12 +1,16 @@
+<p align="center">
+  <img src="./GO-HW_Whitepaper.PNG" alt="GO HW Cover" width="720">
+</p>
+
 # GO HW — From Models to Systems  
 ### Unified Graph Runtime for Logic, AI, Hardware & Energy  
 **Whitepaper v1.3**
 
 ---
 
-## 📘 Introduction
+## Introduction
 
-GO HW extends ONNX far beyond traditional inference by transforming a model into a **fully deployable system** capable of orchestrating:
+GO HW extends ONNX far beyond traditional inference by transforming a model into a **fully deployable system** that orchestrates:
 
 - logic and real-time control  
 - sensors and actuators  
@@ -14,85 +18,85 @@ GO HW extends ONNX far beyond traditional inference by transforming a model into
 - energy constraints and timing behavior  
 - multi-hardware execution (CPU, GPU, FPGA, SoC, NPU…)
 
-The objective is clear: **unify Logic + AI + Hardware** under a single executable, portable, energy-aware graph.
+The goal is simple: **unify Logic + AI + Hardware** under a single executable, portable, energy-aware graph.
 
-This whitepaper introduces the foundations of this paradigm shift, describing how an ONNX graph evolves from a model into a complete hardware-driven pipeline.
+This whitepaper presents how an ONNX model evolves from a static file into a full hardware-driven system.
 
 ---
 
-## 🧭 Table of Contents (short overview)
+## Table of Contents (overview)
 
 - Vision and motivation  
-- ONNX in plain language  
+- ONNX explained simply  
 - ONNX Runtime today  
 - IR-last → IR-first transition  
-- Limitations of current approaches  
-- Introduction to the GO HW Runtime  
+- Limitations of current frameworks  
+- The GO HW runtime  
 - Unified orchestration  
-- Hardware control & system signals  
-- Compilation, pipelines and EPs  
-- GO HW roadmap  
+- Hardware control nodes  
+- Compilation & execution flow  
+- Roadmap  
 
 ---
 
-# 🧩 1. Global Vision  
-### Unifying AI + Logic + Hardware + Energy
+# 1. Global Vision  
+### Unifying AI, logic, hardware and energy
 
-The industry suffers from extreme fragmentation: proprietary SDKs, inconsistent APIs, multiple execution layers, and no shared representation for hardware control or real-time behavior.
+Current industrial pipelines are fragmented: proprietary SDKs, inconsistent APIs, and multiple incompatible runtimes.  
+GO HW introduces a **single graph abstraction** capable of:
 
-GO HW introduces a **single graph abstraction** that can simultaneously:
+- interacting with GPIO, ADC, DAC, PWM  
+- triggering DMA transfers  
+- handling timers and synchronization  
+- executing AI models  
+- managing energy and timing  
+- deploying to many hardware targets without vendor SDKs  
 
-- interact with GPIO, ADC, DAC, PWM  
-- schedule DMA transfers  
-- handle timers, triggers and synchronization  
-- execute inference  
-- manage energy and latency  
-- deploy across hardware targets without vendor SDKs  
-
-The graph becomes the **orchestration language** for the entire system.
+The graph becomes a **complete orchestration language**.
 
 ---
 
-# 📈 2. The GO HW Quadrant  
+# 2. The GO HW Quadrant  
 ### Positioning the unified graph runtime
 
-![GO HW Quadrant](./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/GO-HW_Orvillechart.png)
+<p align="center">
+  <img src="./GO-HW_Orvillechart.png" alt="Quadrant" width="720">
+</p>
 
-GO HW sits in the “disruptive” zone by enabling:
+GO HW enters the “disruptive zone” with:
 
-- **10+ hardware targets from one graph**  
-- **deployment in under 10 minutes**  
+- **10+ hardware targets from a single graph**  
+- **deployment under 10 minutes**  
 - **±2% energy precision**  
 - **<5% timing jitter**  
 - **0 vendor dependency**  
-- **100% abstraction, no SDKs needed**  
-
-This positions GO HW as a universal orchestration layer across CPUs, GPUs, FPGAs and SoCs.
+- **100% abstraction**  
 
 ---
 
-# ⚙️ 3. Internal Architecture  
+#  3. Internal Architecture  
 ### IR-last today, IR-first tomorrow
 
-![IR Pipeline](./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/IR.png)
+<p align="center">
+  <img src="./IR.png" alt="IR Pipeline" width="720">
+</p>
 
-GO HW adopts a hybrid architecture:
+GO HW uses a hybrid architecture:
 
 ### 🔹 IR Last  
-The current ONNX Runtime pipeline:  
-graph optimization → EP → hardware execution.
+Current ONNX Runtime flow: optimization → EP → execution.
 
 ### 🔹 IR First (MLIR / IREE / OpenXLA)  
-The upcoming GO HW extension:  
-ahead-of-time compilation, full graph fusion, deterministic memory planning and unified pipelines for logic + AI + hardware.
+Future approach:  
+AOT compilation, memory planning, fusion of logic + AI + hardware, deterministic timing.
 
-This transition unlocks tighter hardware integration while maintaining ONNX’s portability.
+This unlocks a deeper hardware integration while keeping ONNX portability.
 
 ---
 
-# 🔌 4. Hardware I/O, DMA and signals embedded directly in the graph
+# 4. Hardware I/O, DMA and signal control in the graph
 
-GO HW introduces **new hardware-aware ONNX operators**, including:
+GO HW introduces new hardware-aware ONNX operators such as:
 
 - `GPIO.Read`, `GPIO.Write`  
 - `ADC.Read`, `DAC.Write`  
@@ -101,69 +105,52 @@ GO HW introduces **new hardware-aware ONNX operators**, including:
 - `Trigger.Rise`, `Sync.Wait`  
 - `Energy.Profile`, `Energy.Limit`
 
-These nodes transform the graph into a **system-level orchestrator**, enabling unified control of:
+These nodes turn the graph into a **system-level orchestrator**, capable of unified control over:
 
-- sensors and actuators  
+- sensors & actuators  
+- real-time pipelines  
+- inference  
 - DMA and shared memory  
-- real-time loops  
-- inference engines  
-- energy and thermal constraints  
-
-The entire system becomes graph-described, portable and reproducible.
+- energy & thermal constraints  
 
 ---
 
 # 🖥️ 5. Direct Hardware Deployment  
-### The graph *is* the program
+### The graph becomes the program
 
 With GO HW:
 
-- an ONNX graph becomes a **standalone hardware executable**,  
+- an ONNX file becomes a **portable hardware executable**,  
 - vendor SDKs (CUDA, Vitis, QNN, OpenVINO…) are no longer required,  
-- the runtime manages memory, DMA, synchronization and timing,  
-- the same graph deploys seamlessly across CPU, GPU, FPGA, SoC, NPU.
+- the runtime manages synchronization, memory, DMA, timing,  
+- the same graph deploys seamlessly on CPU, GPU, FPGA, SoC, NPU.
 
-Deployment becomes drastically simpler and integration costs fall significantly.
-
----
-
-# 🧪 6. Visual Excerpts from the Whitepaper
-
-### Cover  
-![Cover](./img/GO-HW_Whitepaper.PNG)
-
-### IR & Orchestration  
-![IR](./img/IR.png)
-
-### Strategic Quadrant  
-![Quadrant](./img/Orvillechart.png)
+This drastically simplifies deployment while reducing long-term integration costs.
 
 ---
 
-# 🚀 7. Industrial Impact
+# 6. Industrial Impact
 
-GO HW targets domains where the convergence of AI, control and hardware is essential:
+GO HW is designed for domains where AI + control + hardware integration matters:
 
+- robotics & embedded vision  
 - advanced automation  
-- robotics and embedded vision  
 - energy & smart infrastructure  
 - aerospace & defense  
-- test benches and instrumentation  
-- embedded & edge computing  
+- instrumentation & test benches  
+- embedded & edge AI  
 
 The unified graph approach reduces:
 
-- integration delays  
-- engineering complexity  
-- long-term maintenance costs  
+- integration complexity  
+- development costs  
 - vendor lock-in  
+- hardware-specific rewrites  
 
 ---
 
-# 📄 8. Download the Whitepaper
+# Download the Whitepaper
 
-👉 **[GO HW — From Models to Systems (Whitepaper v1.3)](./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/GO-HW_Whitepaper_1.3.pdf)**
+👉 **[GO HW — From Models to Systems (Whitepaper v1.3 PDF)](./GO-HW_Whitepaper_1.3.pdf)**
 
 ---
-
-If you need a marketing-oriented version, a more technical deep-dive, or a website-ready HTML page, I can generate those as well.
