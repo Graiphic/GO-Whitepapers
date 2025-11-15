@@ -1,6 +1,10 @@
 # 📊 Benchmarking the Future: Comparing LabVIEW GPU Toolkits  
 **CuLab, G2CPU, and the Graiphic Accelerator**
 
+<p align="center">
+  <img src="./Benchmarking_Whitepaper.PNG" width="700">
+</p>
+
 Welcome to the **Graiphic Benchmarking Whitepaper Repository**, where we share the **methods, results, and LabVIEW sources** used to compare the main GPU acceleration toolkits for **LabVIEW**.
 
 This repository accompanies the official whitepaper:  
@@ -8,7 +12,11 @@ This repository accompanies the official whitepaper:
 
 ---
 
-## 🧩 Overview
+<p align="center">
+  <img src="./Bench2.png" width="700">
+</p>
+
+## Overview
 
 This benchmark measures and compares the **performance**, **integration**, and **determinism** of several LabVIEW GPU toolkits — all tested in the same LabVIEW environment.
 
@@ -22,7 +30,7 @@ The objective is to provide a **real-world comparison** and understand the trade
 
 ---
 
-## ⚙️ Test Environment
+## Test Environment
 
 | Component | Specification |
 |------------|---------------|
@@ -39,7 +47,7 @@ This setup represents a balanced workstation configuration for reproducible LabV
 
 ---
 
-## 📚 Benchmarks Included
+## Benchmarks Included
 
 1. **GEMM Processing**  
    Matrix multiplication followed by arithmetic post-processing.  
@@ -48,27 +56,26 @@ This setup represents a balanced workstation configuration for reproducible LabV
 3. **Complex Number Computation**  
    Handling of real + imaginary tensors using ONNX custom nodes.  
 4. **Signal Processing Application**  
-   FFT + arithmetic operations on **real NI-like signal data (~32 k samples)**.  
+   FFT + arithmetic operations on real NI-like signal data (~32 k samples).  
    ➤ This test was designed to reflect realistic, small-scale sensor workloads — not synthetic stress tests.
 
 ---
 
-## 🧠 Key Findings
+## Key Findings
 
 - **Graiphic Accelerator (TensorRT)** achieves the **highest performance**, up to:  
-  - ⚡ **5× faster than CuLab**  
-  - ⚡ **40× faster than G2CPU**  
+  - 5× faster than CuLab  
+  - 40× faster than G2CPU  
 
-- **Compiled-graph execution (ONNX Runtime)** significantly reduces overhead versus **per-node DLL execution**.
+- **Compiled-graph execution (ONNX Runtime)** drastically reduces overhead compared to **per-node DLL execution**.
 
-- **Complex-number support** is functional via custom ONNX nodes — an open research topic for future native integration.
+- **Complex-number support** works using custom ONNX nodes — an area for future standardization.
 
-- For **small data blocks**, CPU execution remains competitive; GPU benefits grow with workload size.  
-  ➤ The goal is *understanding performance behavior*, not claiming absolute superiority.
+- For small data blocks, CPU execution remains competitive; GPU benefits increase with workload size.
 
 ---
 
-## 🧪 Source Files
+## Source Files
 
 All LabVIEW VIs used to generate the benchmark results are available in the  
 [`/Source`](./Source) directory.
@@ -80,69 +87,57 @@ All LabVIEW VIs used to generate the benchmark results are available in the
 | **Complex** | [Source/Complex](./Source/Complex) | Custom complex-number computation |
 | **Signal Processing** | [Source/Signal Processing Without Indicator And Warmup](./Source/Signal%20Processing%20Without%20Indicator%20And%20Warmup) | FFT-based signal test |
 
-> **Note:** One additional large file is required for full signal-processing reproduction:   
-> - `TEMP.BIN` (2 GB, test data file)  
->   🔗 [Download here](http://download2.graiphic.io/_Bench/TEMP.BIN)
+**Additional required file:**  
+- `TEMP.BIN` (2 GB, test data)  
+👉 http://download2.graiphic.io/_Bench/TEMP.BIN
 
 ---
 
-## 🔬 Replication & Discussion
+## Replication & Discussion
 
-This benchmark was built for **transparency, reproducibility, and community collaboration**.  
-All materials (VIs, datasets, configurations) are public — anyone can rerun or extend the tests.
+This benchmark was built for **transparency, reproducibility, and collaboration**.
 
-We strongly encourage:
-- 🔁 Independent replication using different GPUs, CPUs, or LabVIEW versions  
-- 📈 Comparative submissions via pull requests or GitHub issues  
-- 🧩 Proposals for new test cases (e.g., deep learning workloads, larger FFTs, etc.)  
-- 🧠 Constructive discussion on methodology and interpretation  
+Community contributions encouraged:
+- Independent replication  
+- Comparative pull requests  
+- New test proposals  
+- Methodology discussions  
 
-> **Benchmarking is not competition — it’s collaboration.**  
-> Our goal is to build shared understanding, not to declare winners.
+Discussion board:  
+https://github.com/Graiphic/whitepapers/issues  
 
-📢 **Discussion board:** Use [GitHub Issues](https://github.com/Graiphic/whitepapers/issues) to post replication results, observations, or suggestions.  
-📁 **Repository:** [https://github.com/Graiphic/whitepapers](https://github.com/Graiphic/whitepapers)
-
----
-
-## 🚀 About Graiphic
-
-**Graiphic** develops the first ecosystem unifying **AI + Logic + Hardware + Energy** inside a single **ONNX graph**.  
-Our technology, **GO HW (Graph Orchestration Hardware)**, enables a universal, hardware-agnostic execution layer bridging **ONNX Runtime**, **MLIR**, and **LabVIEW**.
-
-### 📬 Get in Touch
-- 💡 Funding & Partnerships → [funding@graiphic.io](mailto:funding@graiphic.io)  
-- 🌐 Website → [www.graiphic.io](https://www.graiphic.io)
+Repository:  
+https://github.com/Graiphic/whitepapers
 
 ---
 
-## 🗓️ Versioning
+## About Graiphic
+
+Graiphic develops the first ecosystem unifying **AI + Logic + Hardware + Energy** inside a single **ONNX graph**.
+
+### Contact
+- funding@graiphic.io  
+- https://www.graiphic.io
+
+---
+
+## Versioning
 
 | Version | Date | Author | Description |
 |----------|------|--------|-------------|
-| **1.0** | 2025-10-15 | Youssef Menjour (Graiphic) | First release of benchmarking whitepaper and LabVIEW sources |
-| **1.1** | 2025-11-07 | Youssef Menjour (Graiphic) | Added DirectML execution provider |
+| 1.0 | 2025-10-15 | Youssef Menjour | First release |
+| 1.1 | 2025-11-07 | Youssef Menjour | Added DirectML EP |
 
 ---
 
-## 🧮 Towards a Community Standard: LabVIEW Open Benchmark Suite (LOBS)
+## Towards a Community Standard: LabVIEW Open Benchmark Suite (LOBS)
 
-Following this first Graiphic benchmark, we’ve launched the  
-**[LabVIEW Open Benchmark Suite (LOBS)](./LabVIEW%20Open%20Benchmark%20Suite)** —  
-a collaborative initiative inspired by **SPEC** and **MLPerf**, aimed at building  
-a **shared, reproducible standard** for LabVIEW performance evaluation.
+Following this benchmark, we launched  
+👉 **[LabVIEW Open Benchmark Suite (LOBS)](./LabVIEW%20Open%20Benchmark%20Suite)**
 
-LOBS extends this initial study by providing:
-- 🧠 **Open-source, vendor-neutral test cases** (FFT, GEMM, AI, etc.)  
-- 🔁 **Reproducible pipelines** anyone can execute and extend  
-- 📊 **Transparent comparison criteria** (time, precision, energy, determinism)  
+LOBS provides:
+- Open-source vendor-neutral tests  
+- Reproducible pipelines  
+- Transparent comparison criteria  
 
-If you want to replicate or contribute to the next wave of open benchmarks,  
-👉 start here: [**LabVIEW Open Benchmark Suite →**](./LabVIEW%20Open%20Benchmark%20Suite)
-
-> This whitepaper is the **Reference 0** of the suite —  
-> the foundation on which all future community benchmarks will build.
-
----
-
-
+This whitepaper is **Reference 0** of the suite.
