@@ -17,7 +17,7 @@ It provides a unified graphical environment where engineers can author, edit, tr
 SOTA defines the common execution model, tooling, and orchestration principles used across all GO initiatives.
 
 - **Whitepaper:**  
-  👉 [`SOTA GO Whitepaper_1.0.pdf`](./SOTA%20GO/SOTA%20GO%20Whitepaper_1.0.pdf)
+  👉 [`SOTA GO-Whitepaper_1.0.pdf`](./SOTA%20GO/SOTA%20GO-Whitepaper_1.0.pdf)
 
 - **Folder:**  
   👉 [`SOTA GO`](./SOTA%20GO/)
