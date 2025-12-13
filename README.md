@@ -2,7 +2,8 @@
 
 A curated collection of Graiphic’s technical whitepapers describing a unified approach to graph computing, AI orchestration, informed machine learning, and hardware–software unification.
 
-These documents form a coherent program built on a shared foundation: ONNX as a universal graph format, ONNX Runtime as the execution engine, and SOTA as the graphical orchestration environment.
+These documents form a coherent program built on a shared foundation:
+ONNX as a universal graph format, ONNX Runtime as the execution engine, and SOTA as the graphical orchestration environment.
 
 Each whitepaper resides in its own folder with the corresponding PDF and associated visual material.
 
@@ -58,7 +59,7 @@ GO IML introduces Informed Machine Learning as a native graph-based capability.
 It embeds physics, logic, constraints, and expert knowledge directly into ONNX training graphs, enabling faster convergence, stronger generalization, explainability, and robust deployment on real-world hardware.
 
 - **Whitepaper:**  
-  👉 [`GO_IML_Whitepaper_1.1.pdf`](./GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/GO_IML_Whitepaper_1.1.pdf)
+  👉 [`GO IML_Whitepaper_1.1.pdf`](./GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/GO%20IML_Whitepaper_1.1.pdf)
 
 - **Folder:**  
   👉 [`GO IML — From Theory to Superiority`](./GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/)
