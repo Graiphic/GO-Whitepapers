@@ -2,9 +2,9 @@
 
 A curated collection of Graiphic’s technical whitepapers describing a unified approach to graph computing, AI orchestration, informed machine learning, and hardware–software unification.
 
-These documents are not standalone publications but form a coherent program built on a shared foundation: ONNX as a universal graph format, ONNX Runtime as the execution engine, and SOTA as the graphical orchestration environment.
+These documents form a coherent program built on a shared foundation: ONNX as a universal graph format, ONNX Runtime as the execution engine, and SOTA as the graphical orchestration environment.
 
-Each whitepaper resides in its own folder with the corresponding PDF and, when applicable, associated visual material.
+Each whitepaper resides in its own folder with the corresponding PDF and associated visual material.
 
 ## 📄 Whitepapers & Repositories
 
@@ -16,7 +16,7 @@ It provides a unified graphical environment where engineers can author, edit, tr
 SOTA defines the common execution model, tooling, and orchestration principles used across all GO initiatives.
 
 - **Whitepaper:**  
-  👉 [`SOTA_GO_Whitepaper_1.0.pdf`](./SOTA%20GO/SOTA%20GO%20Whitepaper_1.0.pdf)
+  👉 [`SOTA GO Whitepaper_1.0.pdf`](./SOTA%20GO/SOTA%20GO%20Whitepaper_1.0.pdf)
 
 - **Folder:**  
   👉 [`SOTA GO`](./SOTA%20GO/)
@@ -30,7 +30,7 @@ GO HW extends ONNX beyond AI inference into a deterministic system and hardware 
 It introduces hardware primitives such as GPIO, DMA, ADC/DAC, timers, and energy-aware execution as first-class graph nodes, enabling real-time deployment across CPUs, GPUs, FPGAs, NPUs, and embedded SoCs using a single ONNX artifact.
 
 - **Whitepaper:**  
-  👉 [`GO_HW_Whitepaper_1.4.pdf`](./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/GO_HW_Whitepaper_1.4.pdf)
+  👉 [`GO-HW_Whitepaper_1.4.pdf`](./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/GO-HW_Whitepaper_1.4.pdf)
 
 - **Folder:**  
   👉 [`GO HW — From Models to Systems`](./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/)
@@ -44,7 +44,7 @@ GO GenAI addresses the fragmentation of the Generative AI ecosystem by transform
 It enables deterministic coordination of models, tokenizers, data streams, logic, and heterogeneous hardware runtimes inside a single executable graph, fully integrated within SOTA and without reliance on Python glue code.
 
 - **Whitepaper:**  
-  👉 [`GO_GenAI_Whitepaper_1.1.pdf`](./GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/GO_GenAI_Whitepaper_1.1.pdf)
+  👉 [`GO-GenAI_Whitepaper_1.1.pdf`](./GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/GO-GenAI_Whitepaper_1.1.pdf)
 
 - **Folder:**  
   👉 [`GO GenAI — From Fragmentation to Orchestration`](./GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/)
