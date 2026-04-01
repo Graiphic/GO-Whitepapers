@@ -229,6 +229,32 @@
       return new URL(resolvedPath.replace(/^\//, ""), window.location.href.split("#")[0]).href;
     }
 
+    function resolveLocalAssetHref(rawHref, currentFile) {
+      if (!rawHref) {
+        return null;
+      }
+
+      if (/^(?:[a-z]+:)?\/\//i.test(rawHref) || rawHref.startsWith("mailto:") || rawHref.startsWith("tel:")) {
+        return null;
+      }
+
+      var candidate = rawHref;
+
+      if (candidate.startsWith("#/")) {
+        candidate = candidate.slice(2);
+      } else if (candidate.startsWith("#")) {
+        return null;
+      }
+
+      candidate = candidate.split("?")[0].split("#")[0];
+
+      if (!/\.(pdf|png|svg|jpe?g|gif|webp|avif)$/i.test(candidate)) {
+        return null;
+      }
+
+      return resolveLocalAssetUrl(candidate, currentFile);
+    }
+
     window.$docsify = {
       name: "Graiphic GO Whitepapers",
       repo: "Graiphic/GO-Whitepapers",
@@ -270,6 +296,16 @@
 
             document.querySelectorAll(".markdown-section a[href], .cover-main a[href], .app-nav a[href]").forEach(function (anchor) {
               var rawHref = anchor.getAttribute("href");
+              var rewrittenAssetHref = resolveLocalAssetHref(rawHref, currentFile);
+              if (rewrittenAssetHref) {
+                anchor.setAttribute("href", rewrittenAssetHref);
+                if (/\.pdf$/i.test(rewrittenAssetHref)) {
+                  anchor.setAttribute("target", "_blank");
+                  anchor.setAttribute("rel", "noopener noreferrer");
+                }
+                return;
+              }
+
               var rewrittenHref = resolveLocalDocLink(rawHref, currentFile);
               if (rewrittenHref) {
                 anchor.setAttribute("href", rewrittenHref);

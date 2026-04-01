@@ -52,7 +52,7 @@ foreach ($token in @("GO Whitepaper Series", "SOTA GO", "GO HW", "GO GenAI", "GO
     }
 }
 
-foreach ($token in @("function resolveLocalAssetUrl", "function resolveLocalDocLink", "hook.beforeEach", "hook.doneEach")) {
+foreach ($token in @("function resolveLocalAssetUrl", "function resolveLocalDocLink", "function resolveLocalAssetHref", "hook.beforeEach", "hook.doneEach")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing expected Docsify asset/link rewrite hook: $token"
     }
