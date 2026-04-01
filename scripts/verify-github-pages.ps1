@@ -68,4 +68,10 @@ foreach ($token in @("theme-toggle", "function applyTheme", "function ensureThem
     }
 }
 
+foreach ($token in @("#0d1117", "#161b22", "#30363d", "#e6edf3", "#8b949e", "#58a6ff", ".markdown-section strong", ".app-nav a", ".sidebar ul li a")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing expected GitHub-like dark theme styling token: $token"
+    }
+}
+
 Write-Host "GitHub Pages smoke checks passed."
