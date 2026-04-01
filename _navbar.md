@@ -1,0 +1,6 @@
+- [Home](/)
+- [SOTA GO](/SOTA%20GO/README.md)
+- [GO HW](/GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/README.md)
+- [GO GenAI](/GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/README.md)
+- [GO IML](/GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/README.md)
+- [GitHub](https://github.com/Graiphic/GO-Whitepapers)

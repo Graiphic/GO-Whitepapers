@@ -1,86 +1,101 @@
 # Graiphic GO Whitepaper Series
 
-A curated collection of Graiphic’s technical whitepapers describing a unified approach to graph computing, AI orchestration, informed machine learning, and hardware–software unification.
+<div class="go-hero">
+  <p><strong>Unified graph computing for AI, logic, hardware, and deployable systems.</strong></p>
+  <p>
+    This library gathers Graiphic's GO whitepapers into a single GitHub Pages experience built around
+    ONNX as a graph format, ONNX Runtime as an execution layer, and SOTA as the visual orchestration environment.
+  </p>
+  <div class="go-chip-row">
+    <span class="go-chip">Graph Computing</span>
+    <span class="go-chip">AI Orchestration</span>
+    <span class="go-chip">Hardware Abstraction</span>
+    <span class="go-chip">Informed Machine Learning</span>
+  </div>
+  <div class="go-actions">
+    <a class="go-button" href="#/SOTA%20GO/README.md">Browse Whitepapers</a>
+    <a class="go-button" href="https://github.com/Graiphic/GO-Whitepapers" target="_blank" rel="noopener noreferrer">Open Repository</a>
+  </div>
+</div>
 
-These documents form a coherent program built on a shared foundation:
-ONNX as a universal graph format, ONNX Runtime as the execution engine, and SOTA as the graphical orchestration environment.
+## Collection Overview
 
-Each whitepaper resides in its own folder with the corresponding PDF and associated visual material.
+Each whitepaper lives in its own folder with:
 
-## 📄 Whitepapers & Repositories
+- a Markdown presentation page
+- the original PDF
+- supporting illustrations and diagrams
 
-### **1. SOTA — The LabVIEW IDE for Graph Computing (v1.0)**
-**Theme:** ONNX-native authoring, compilation, and orchestration inside LabVIEW  
-**Summary:**  
-SOTA is the first building block of Graiphic’s technology stack and a fully functional platform already available to industry, research laboratories, and academic institutions.  
-It provides a unified graphical environment where engineers can author, edit, train, optimize, and deploy ONNX graphs visually inside LabVIEW.  
-SOTA defines the common execution model, tooling, and orchestration principles used across all GO initiatives.
+Use the sidebar to jump directly between documents or open the PDF versions from the download section.
 
-- **Whitepaper:**  
-  👉 [`SOTA GO-Whitepaper_1.0.pdf`](./SOTA%20GO/SOTA%20GO-Whitepaper_1.0.pdf)
+<div class="go-grid">
+  <div class="go-card">
+    <h3>SOTA GO</h3>
+    <p><strong>Theme:</strong> ONNX-native authoring, compilation, and orchestration inside LabVIEW.</p>
+    <p>The foundational visual environment for building, training, deploying, and orchestrating ONNX graphs across the Graiphic stack.</p>
+    <p><a href="#/SOTA%20GO/README.md">Open page</a><br><a href="./SOTA%20GO/SOTA%20GO-Whitepaper_1.0.pdf">Download PDF</a></p>
+  </div>
+  <div class="go-card">
+    <h3>GO HW</h3>
+    <p><strong>Theme:</strong> Hardware orchestration through ONNX.</p>
+    <p>Extends the graph model beyond inference into deterministic orchestration of I/O, DMA, timing, and heterogeneous hardware targets.</p>
+    <p><a href="#/GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/README.md">Open page</a><br><a href="./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/GO-HW_Whitepaper_1.4.pdf">Download PDF</a></p>
+  </div>
+  <div class="go-card">
+    <h3>GO GenAI</h3>
+    <p><strong>Theme:</strong> Unified orchestration of Generative AI through ONNX.</p>
+    <p>Transforms fragmented GenAI stacks into a single graph-based system that combines models, tokenizers, logic, memory, and runtime orchestration.</p>
+    <p><a href="#/GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/README.md">Open page</a><br><a href="./GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/GO-GenAI_Whitepaper_1.1.pdf">Download PDF</a></p>
+  </div>
+  <div class="go-card">
+    <h3>GO IML</h3>
+    <p><strong>Theme:</strong> Informed Machine Learning inside the ONNX graph.</p>
+    <p>Introduces a knowledge-aware training and deployment approach where physics, logic, constraints, and expert priors become native graph elements.</p>
+    <p><a href="#/GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/README.md">Open page</a><br><a href="./GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/GO%20IML_Whitepaper_1.1.pdf">Download PDF</a></p>
+  </div>
+</div>
 
-- **Folder:**  
-  👉 [`SOTA GO`](./SOTA%20GO/)
+## Whitepapers
 
----
+### 1. SOTA GO - The LabVIEW IDE for Graph Computing
 
-### **2. GO HW — From Models to Systems (v1.4)**
-**Theme:** Hardware orchestration through ONNX  
-**Summary:**  
-GO HW extends ONNX beyond AI inference into a deterministic system and hardware orchestration graph.  
-It introduces hardware primitives such as GPIO, DMA, ADC/DAC, timers, and energy-aware execution as first-class graph nodes, enabling real-time deployment across CPUs, GPUs, FPGAs, NPUs, and embedded SoCs using a single ONNX artifact.
+SOTA GO is the operational foundation of Graiphic's technology stack. It provides a unified visual cockpit where engineers can author, inspect, train, optimize, deploy, and operate ONNX graphs directly inside LabVIEW.
 
-- **Whitepaper:**  
-  👉 [`GO-HW_Whitepaper_1.4.pdf`](./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/GO-HW_Whitepaper_1.4.pdf)
+- [Open the SOTA GO page](./SOTA%20GO/README.md)
+- [Download the SOTA GO PDF](./SOTA%20GO/SOTA%20GO-Whitepaper_1.0.pdf)
 
-- **Folder:**  
-  👉 [`GO HW — From Models to Systems`](./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/)
+### 2. GO HW - From Models to Systems
 
----
+GO HW extends ONNX beyond model execution into deterministic system orchestration. It introduces graph-level hardware primitives for GPIO, DMA, ADC, DAC, timers, synchronization, and energy-aware deployment.
 
-### **3. GO GenAI — From Fragmentation to Orchestration (v1.1)**
-**Theme:** Unified orchestration of Generative AI through ONNX  
-**Summary:**  
-GO GenAI addresses the fragmentation of the Generative AI ecosystem by transforming ONNX into a dynamic orchestration fabric.  
-It enables deterministic coordination of models, tokenizers, data streams, logic, and heterogeneous hardware runtimes inside a single executable graph, fully integrated within SOTA and without reliance on Python glue code.
+- [Open the GO HW page](./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/README.md)
+- [Download the GO HW PDF](./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/GO-HW_Whitepaper_1.4.pdf)
 
-- **Whitepaper:**  
-  👉 [`GO-GenAI_Whitepaper_1.1.pdf`](./GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/GO-GenAI_Whitepaper_1.1.pdf)
+### 3. GO GenAI - From Fragmentation to Orchestration
 
-- **Folder:**  
-  👉 [`GO GenAI — From Fragmentation to Orchestration`](./GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/)
+GO GenAI reframes generative AI as a system orchestration problem. Models, tokenizers, control flow, memory, preprocessing, postprocessing, and hardware execution become part of one executable graph.
 
----
+- [Open the GO GenAI page](./GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/README.md)
+- [Download the GO GenAI PDF](./GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/GO-GenAI_Whitepaper_1.1.pdf)
 
-### **4. GO IML — From Theory to Superiority (v1.1)**
-**Theme:** Informed Machine Learning inside the ONNX graph  
-**Summary:**  
-GO IML introduces Informed Machine Learning as a native graph-based capability.  
-It embeds physics, logic, constraints, and expert knowledge directly into ONNX training graphs, enabling faster convergence, stronger generalization, explainability, and robust deployment on real-world hardware.
+### 4. GO IML - From Theory to Superiority
 
-- **Whitepaper:**  
-  👉 [`GO IML_Whitepaper_1.1.pdf`](./GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/GO%20IML_Whitepaper_1.1.pdf)
+GO IML introduces Informed Machine Learning as a graph-native capability where priors, symbolic logic, physical constraints, and expert knowledge directly shape the learning process and final deployed system.
 
-- **Folder:**  
-  👉 [`GO IML — From Theory to Superiority`](./GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/)
+- [Open the GO IML page](./GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/README.md)
+- [Download the GO IML PDF](./GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/GO%20IML_Whitepaper_1.1.pdf)
 
----
+## Learn More
 
-## 🔗 Learn More
+- Website: [graiphic.io](https://www.graiphic.io)
+- YouTube: [@graiphic](https://www.youtube.com/@graiphic)
+- News and Insights: [graiphic.io/news-insights](https://graiphic.io/news-insights/)
 
-🌐 Website: https://www.graiphic.io  
-📺 YouTube: https://www.youtube.com/@graiphic  
-📰 News & Insights: https://graiphic.io/news-insights/
+## Contact
 
----
+- hello@graiphic.io
 
-## ✉️ Contact
-
-📧 hello@graiphic.io
-
----
-
-## 🪪 License
+## License
 
 Released under **CC BY-NC-SA 4.0**  
-© 2025 Graiphic — https://www.graiphic.io
+© 2025 Graiphic - https://www.graiphic.io
