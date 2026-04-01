@@ -84,5 +84,3 @@ It embeds physics, logic, constraints, and expert knowledge directly into ONNX t
 
 Released under **CC BY-NC-SA 4.0**  
 © 2025 Graiphic — https://www.graiphic.io
-
-test
