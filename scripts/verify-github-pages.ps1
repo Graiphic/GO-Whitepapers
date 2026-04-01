@@ -58,4 +58,8 @@ foreach ($token in @("function resolveLocalAssetUrl", "function resolveLocalDocL
     }
 }
 
+if ($indexHtml -notmatch [regex]::Escape(".sidebar-nav a[href]")) {
+    throw "index.html is missing sidebar link rewriting for Docsify navigation assets"
+}
+
 Write-Host "GitHub Pages smoke checks passed."

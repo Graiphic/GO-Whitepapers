@@ -294,7 +294,7 @@
           hook.doneEach(function () {
             var currentFile = currentFileFromRoute(vm);
 
-            document.querySelectorAll(".markdown-section a[href], .cover-main a[href], .app-nav a[href]").forEach(function (anchor) {
+            document.querySelectorAll(".markdown-section a[href], .cover-main a[href], .app-nav a[href], .sidebar-nav a[href]").forEach(function (anchor) {
               var rawHref = anchor.getAttribute("href");
               var rewrittenAssetHref = resolveLocalAssetHref(rawHref, currentFile);
               if (rewrittenAssetHref) {
