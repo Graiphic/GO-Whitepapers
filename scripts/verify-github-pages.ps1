@@ -74,4 +74,10 @@ foreach ($token in @("#0d1117", "#161b22", "#30363d", "#e6edf3", "#8b949e", "#58
     }
 }
 
+foreach ($token in @(".markdown-section h1 a", ".markdown-section h2 a", ".markdown-section h3 a")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing heading anchor contrast override: $token"
+    }
+}
+
 Write-Host "GitHub Pages smoke checks passed."
