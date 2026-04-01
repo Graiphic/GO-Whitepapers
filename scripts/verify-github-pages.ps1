@@ -44,10 +44,17 @@ if ($missing.Count -gt 0) {
 }
 
 $rootReadme = Get-Content -LiteralPath (Join-Path $repoRoot "README.md") -Raw
+$indexHtml = Get-Content -LiteralPath (Join-Path $repoRoot "index.html") -Raw
 
 foreach ($token in @("GO Whitepaper Series", "SOTA GO", "GO HW", "GO GenAI", "GO IML")) {
     if ($rootReadme -notmatch [regex]::Escape($token)) {
         throw "Root README.md is missing expected content token: $token"
+    }
+}
+
+foreach ($token in @("function resolveLocalAssetUrl", "function resolveLocalDocLink", "hook.beforeEach", "hook.doneEach")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing expected Docsify asset/link rewrite hook: $token"
     }
 }
 

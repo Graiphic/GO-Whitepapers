@@ -140,6 +140,95 @@
 <body>
   <div id="app">Loading whitepapers...</div>
   <script>
+    function normalizeDocPath(path) {
+      var normalized = path || "/README.md";
+      normalized = normalized.split("?")[0].split("#")[0];
+
+      if (!normalized.startsWith("/")) {
+        normalized = "/" + normalized;
+      }
+
+      if (!/\.md$/i.test(normalized)) {
+        if (!normalized.endsWith("/")) {
+          normalized += "/";
+        }
+        normalized += "README.md";
+      }
+
+      return normalized.replace(/\/+/g, "/");
+    }
+
+    function currentFileFromRoute(vm) {
+      var current = vm.route && (vm.route.file || vm.route.path) ? (vm.route.file || vm.route.path) : "/README.md";
+      return normalizeDocPath(current);
+    }
+
+    function resolveLocalDocLink(rawHref, currentFile) {
+      if (!rawHref) {
+        return null;
+      }
+
+      if (
+        rawHref.startsWith("#") ||
+        rawHref.startsWith("mailto:") ||
+        rawHref.startsWith("tel:") ||
+        /^(?:[a-z]+:)?\/\//i.test(rawHref)
+      ) {
+        return null;
+      }
+
+      var parts = rawHref.split("#", 2);
+      var pathPart = parts[0];
+      var anchorPart = parts.length > 1 ? parts[1] : "";
+
+      if (!pathPart) {
+        return null;
+      }
+
+      if (/\.(png|svg|jpe?g|gif|webp|avif|pdf)$/i.test(pathPart)) {
+        return null;
+      }
+
+      if (!/\.md$/i.test(pathPart)) {
+        if (/\/$/.test(pathPart)) {
+          pathPart += "README.md";
+        } else if (!/\.[a-z0-9]+$/i.test(pathPart)) {
+          pathPart += "/README.md";
+        } else {
+          return null;
+        }
+      }
+
+      var currentDir = currentFile.replace(/[^/]*$/, "");
+      var resolved = new URL(pathPart, "https://graiphic.local" + currentDir).pathname.replace(/\/+/g, "/");
+      var docsifyHref = "#" + resolved;
+
+      if (anchorPart) {
+        docsifyHref += "?id=" + encodeURIComponent(anchorPart);
+      }
+
+      return docsifyHref;
+    }
+
+    function resolveLocalAssetUrl(rawUrl, currentFile) {
+      if (!rawUrl) {
+        return null;
+      }
+
+      if (
+        rawUrl.startsWith("#") ||
+        rawUrl.startsWith("data:") ||
+        rawUrl.startsWith("blob:") ||
+        /^(?:[a-z]+:)?\/\//i.test(rawUrl)
+      ) {
+        return null;
+      }
+
+      var currentDir = currentFile.replace(/[^/]*$/, "");
+      var resolvedPath = new URL(rawUrl, "https://graiphic.local" + currentDir).pathname.replace(/\/+/g, "/");
+      return new URL(resolvedPath.replace(/^\//, ""), window.location.href.split("#")[0]).href;
+    }
+
     window.$docsify = {
       name: "Graiphic GO Whitepapers",
       repo: "Graiphic/GO-Whitepapers",
@@ -158,7 +247,45 @@
         placeholder: "Search whitepapers",
         noData: "No matching section found.",
         depth: 3
-      }
+      },
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach(function (markdown) {
+            var currentFile = currentFileFromRoute(vm);
+
+            return markdown.replace(
+              /(<img\b[^>]*\bsrc=["'])([^"']+)(["'][^>]*>)/gi,
+              function (match, prefix, rawSrc, suffix) {
+                var rewrittenSrc = resolveLocalAssetUrl(rawSrc, currentFile);
+                if (!rewrittenSrc) {
+                  return match;
+                }
+                return prefix + rewrittenSrc + suffix;
+              }
+            );
+          });
+
+          hook.doneEach(function () {
+            var currentFile = currentFileFromRoute(vm);
+
+            document.querySelectorAll(".markdown-section a[href], .cover-main a[href], .app-nav a[href]").forEach(function (anchor) {
+              var rawHref = anchor.getAttribute("href");
+              var rewrittenHref = resolveLocalDocLink(rawHref, currentFile);
+              if (rewrittenHref) {
+                anchor.setAttribute("href", rewrittenHref);
+              }
+            });
+
+            document.querySelectorAll(".markdown-section img[src]").forEach(function (image) {
+              var rawSrc = image.getAttribute("src");
+              var rewrittenSrc = resolveLocalAssetUrl(rawSrc, currentFile);
+              if (rewrittenSrc) {
+                image.setAttribute("src", rewrittenSrc);
+              }
+            });
+          });
+        }
+      ]
     };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
