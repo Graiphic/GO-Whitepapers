@@ -62,4 +62,10 @@ if ($indexHtml -notmatch [regex]::Escape(".sidebar-nav a[href]")) {
     throw "index.html is missing sidebar link rewriting for Docsify navigation assets"
 }
 
+foreach ($token in @("theme-toggle", "function applyTheme", "function ensureThemeToggle")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing expected theme toggle support: $token"
+    }
+}
+
 Write-Host "GitHub Pages smoke checks passed."
