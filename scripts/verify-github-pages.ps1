@@ -60,7 +60,8 @@ foreach ($token in @(
     "GO-GenAI_cover.PNG",
     "GO%20IML_cover.png",
     'class="go-card-cover-link"',
-    'class="go-card-cover"'
+    'class="go-card-cover"',
+    'width="240"'
 )) {
     if ($rootReadme -notmatch [regex]::Escape($token)) {
         throw "Root README.md is missing expected whitepaper cover card token: $token"
