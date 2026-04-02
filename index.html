@@ -131,8 +131,12 @@
     }
 
     .app-nav {
-      border-bottom: 1px solid var(--surface-border);
-      background: var(--panel-bg-soft);
+      width: fit-content;
+      max-width: calc(100% - var(--nav-safe-right));
+      margin-left: auto;
+      margin-right: auto;
+      border-bottom: 0;
+      background: transparent;
     }
 
     .app-nav ul {
@@ -140,7 +144,7 @@
       align-items: center;
       justify-content: center;
       gap: 1.5rem;
-      width: 100%;
+      width: auto;
     }
 
     .app-nav li {
@@ -335,7 +339,8 @@
 
     @media screen and (min-width: 769px) {
       .app-nav {
-        padding: 0.9rem calc(var(--nav-safe-right) + 1.75rem) 0.75rem 1.25rem;
+        padding: 0.85rem 1.25rem 0.35rem;
+        transform: translateX(calc(var(--nav-safe-right) * -0.18));
       }
 
       .sidebar {
@@ -348,6 +353,14 @@
     }
 
     @media screen and (max-width: 768px) {
+      .app-nav {
+        width: auto;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        transform: none;
+      }
+
       .app-nav ul {
         justify-content: flex-start;
         gap: 0.45rem;

@@ -86,4 +86,10 @@ foreach ($token in @("--nav-safe-right", ".app-nav ul", ".app-nav li", "justify-
     }
 }
 
+foreach ($token in @("width: fit-content", "max-width: calc(100% - var(--nav-safe-right))", "background: transparent", "border-bottom: 0")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing integrated top navigation styling token: $token"
+    }
+}
+
 Write-Host "GitHub Pages smoke checks passed."
