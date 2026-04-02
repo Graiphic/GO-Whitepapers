@@ -46,6 +46,7 @@ if ($missing.Count -gt 0) {
 
 $rootReadme = Get-Content -LiteralPath (Join-Path $repoRoot "README.md") -Raw
 $indexHtml = Get-Content -LiteralPath (Join-Path $repoRoot "index.html") -Raw
+$bannerSvg = Get-Content -LiteralPath (Join-Path $repoRoot "assets\\open-github-pages-banner.svg") -Raw
 
 foreach ($token in @("GO Whitepaper Series", "SOTA GO", "GO HW", "GO GenAI", "GO IML")) {
     if ($rootReadme -notmatch [regex]::Escape($token)) {
@@ -65,6 +66,16 @@ foreach ($token in @(
 
 if ($rootReadme -match [regex]::Escape('data-render-target="pages"')) {
     throw 'Root README.md should no longer include a GitHub-return link block for GitHub Pages'
+}
+
+foreach ($token in @('stroke-linejoin="round"', 'M63 73c8-3 18-3 27 3v29c-8-5-18-6-27-3z', 'M92 76v29')) {
+    if ($bannerSvg -notmatch [regex]::Escape($token)) {
+        throw "Banner SVG is missing expected book icon token: $token"
+    }
+}
+
+if ($bannerSvg -match [regex]::Escape('M87 72h18l-2 18h18v18h-18l2 18H87l-2-18H67V90h18z')) {
+    throw 'Banner SVG should no longer contain the old cross icon path'
 }
 
 foreach ($token in @("function resolveLocalAssetUrl", "function resolveLocalDocLink", "function resolveLocalAssetHref", "hook.beforeEach", "hook.doneEach")) {
