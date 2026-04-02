@@ -53,14 +53,19 @@ foreach ($token in @("GO Whitepaper Series", "SOTA GO", "GO HW", "GO GenAI", "GO
 }
 
 foreach ($token in @(
+    '<div class="go-pages-link" data-render-target="github">',
     'data-render-target="github"',
+    'View this repository as a GitHub Pages site',
     'https://graiphic.github.io/GO-Whitepapers/',
-    'data-render-target="pages"',
-    'https://github.com/Graiphic/GO-Whitepapers'
+    '# Graiphic GO Whitepaper Series'
 )) {
     if ($rootReadme -notmatch [regex]::Escape($token)) {
         throw "Root README.md is missing expected contextual repository/pages link token: $token"
     }
+}
+
+if ($rootReadme -match [regex]::Escape('data-render-target="pages"')) {
+    throw 'Root README.md should no longer include a GitHub-return link block for GitHub Pages'
 }
 
 foreach ($token in @("function resolveLocalAssetUrl", "function resolveLocalDocLink", "function resolveLocalAssetHref", "hook.beforeEach", "hook.doneEach")) {
@@ -69,7 +74,7 @@ foreach ($token in @("function resolveLocalAssetUrl", "function resolveLocalDocL
     }
 }
 
-foreach ($token in @("function updateRenderContextLinks", 'data-render-context', 'updateRenderContextLinks("pages")')) {
+foreach ($token in @("function updateRenderContextLinks", 'data-render-context', 'updateRenderContextLinks("pages")', ".markdown-section .go-pages-link", "#cf222e")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing expected contextual README link toggle support: $token"
     }

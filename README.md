@@ -1,3 +1,7 @@
+<div class="go-pages-link" data-render-target="github">
+  <a href="https://graiphic.github.io/GO-Whitepapers/">View this repository as a GitHub Pages site</a>
+</div>
+
 # Graiphic GO Whitepaper Series
 
 <div class="go-hero">
@@ -11,12 +15,6 @@
     <span class="go-chip">AI Orchestration</span>
     <span class="go-chip">Hardware Abstraction</span>
     <span class="go-chip">Informed Machine Learning</span>
-  </div>
-  <div class="go-context-link" data-render-target="github">
-    If you would like to browse the equivalent GitHub Pages version, <a href="https://graiphic.github.io/GO-Whitepapers/">click here</a>.
-  </div>
-  <div class="go-context-link" data-render-target="pages" hidden>
-    If you would like to switch to the classic GitHub repository view, <a href="https://github.com/Graiphic/GO-Whitepapers">click here</a>.
   </div>
 </div>
 
