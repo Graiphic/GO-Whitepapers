@@ -55,6 +55,19 @@ foreach ($token in @("GO Whitepaper Series", "SOTA GO", "GO HW", "GO GenAI", "GO
 }
 
 foreach ($token in @(
+    "SOTA%20GO_cover.png",
+    "GO-HW_cover.PNG",
+    "GO-GenAI_cover.PNG",
+    "GO%20IML_cover.png",
+    'class="go-card-cover-link"',
+    'class="go-card-cover"'
+)) {
+    if ($rootReadme -notmatch [regex]::Escape($token)) {
+        throw "Root README.md is missing expected whitepaper cover card token: $token"
+    }
+}
+
+foreach ($token in @(
     '<div class="go-pages-link" data-render-target="github">',
     './assets/open-github-pages-banner.svg',
     '# Graiphic GO Whitepaper Series'
@@ -109,6 +122,12 @@ foreach ($token in @(".sidebar .app-sub-sidebar li:before", "content: none")) {
 foreach ($token in @(".sidebar .app-sub-sidebar a", '.sidebar-nav a[href$=".pdf"]', "text-underline-offset")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing expected sidebar link emphasis token: $token"
+    }
+}
+
+foreach ($token in @(".markdown-section .go-card-cover-link", ".markdown-section .go-card-cover", "object-fit: cover", "aspect-ratio")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing expected whitepaper cover card styling token: $token"
     }
 }
 

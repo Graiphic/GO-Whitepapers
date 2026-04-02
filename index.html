@@ -291,6 +291,32 @@
       margin-bottom: 0.55rem;
     }
 
+    .markdown-section .go-card-cover-link {
+      display: block;
+      margin-top: 1rem;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--surface-border);
+      background: var(--panel-bg-soft);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .markdown-section .go-card-cover-link:hover {
+      transform: translateY(-2px);
+      border-color: var(--theme-color);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+      text-decoration: none;
+    }
+
+    .markdown-section .go-card-cover {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: top center;
+      background: #ffffff;
+    }
+
     .markdown-section .go-chip-row {
       display: flex;
       flex-wrap: wrap;
