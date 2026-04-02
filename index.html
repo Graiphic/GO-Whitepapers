@@ -138,12 +138,14 @@
 
     .sidebar-toggle {
       background: var(--sidebar-bg);
-      border-top: 1px solid var(--surface-border);
-      box-shadow: 0 -10px 24px var(--surface-shadow);
+      border-top: 1px solid var(--sidebar-bg);
+      box-shadow: none;
     }
 
     body.close .sidebar-toggle {
       background: var(--sidebar-bg);
+      border-top-color: var(--sidebar-bg);
+      box-shadow: none;
     }
 
     .app-nav a {

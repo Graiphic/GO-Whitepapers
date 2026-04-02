@@ -119,7 +119,7 @@ foreach ($token in @(".sidebar .app-sub-sidebar li:before", "content: none")) {
     }
 }
 
-foreach ($token in @(".sidebar-toggle {", "background: var(--sidebar-bg);", "border-top: 1px solid var(--surface-border);", "body.close .sidebar-toggle")) {
+foreach ($token in @(".sidebar-toggle {", "background: var(--sidebar-bg);", "border-top: 1px solid var(--sidebar-bg);", "box-shadow: none;", "body.close .sidebar-toggle")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing expected themed mobile sidebar toggle token: $token"
     }
