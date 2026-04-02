@@ -98,7 +98,7 @@ foreach ($token in @("--nav-shift-left", "translateX(calc(var(--nav-shift-left) 
     }
 }
 
-if ($indexHtml -notmatch [regex]::Escape("--nav-shift-left: 6rem;")) {
+if ($indexHtml -notmatch [regex]::Escape("--nav-shift-left: 12rem;")) {
     throw "index.html is missing the expected tuned desktop top navigation offset value"
 }
 
