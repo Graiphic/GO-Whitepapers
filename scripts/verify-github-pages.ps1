@@ -68,6 +68,12 @@ foreach ($token in @("theme-toggle", "function applyTheme", "function ensureThem
     }
 }
 
+foreach ($token in @("<html lang=""en"" data-theme=""dark"">", "return ""dark"";")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing expected default dark mode behavior token: $token"
+    }
+}
+
 foreach ($token in @("#0d1117", "#161b22", "#30363d", "#e6edf3", "#8b949e", "#58a6ff", ".markdown-section strong", ".app-nav a", ".sidebar ul li a")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing expected GitHub-like dark theme styling token: $token"
@@ -92,7 +98,7 @@ foreach ($token in @("width: fit-content", "max-width: calc(100% - var(--nav-saf
     }
 }
 
-foreach ($token in @("--nav-shift-left", "translateX(calc(var(--nav-shift-left) * -1))")) {
+foreach ($token in @("--nav-shift-left", "--nav-shift-up", "transform: translate(", "calc(var(--nav-shift-left) * -1)", "calc(var(--nav-shift-up) * -1)")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing explicit desktop left offset for top navigation: $token"
     }
