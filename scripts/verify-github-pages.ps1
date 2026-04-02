@@ -102,4 +102,10 @@ if ($indexHtml -notmatch [regex]::Escape("--nav-shift-left: 12rem;")) {
     throw "index.html is missing the expected tuned desktop top navigation offset value"
 }
 
+foreach ($token in @("--nav-link-size", "--nav-link-weight", "font-size: var(--nav-link-size)", "font-weight: var(--nav-link-weight)")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing expected top navigation typography token: $token"
+    }
+}
+
 Write-Host "GitHub Pages smoke checks passed."

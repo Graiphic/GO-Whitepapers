@@ -18,6 +18,8 @@
       --link-color: #0f766e;
       --nav-safe-right: 14rem;
       --nav-shift-left: 12rem;
+      --nav-link-size: 1.35rem;
+      --nav-link-weight: 600;
       --sidebar-width: 320px;
       --sidebar-border-color: #dbe4ee;
       --heading-color: #0f172a;
@@ -129,6 +131,9 @@
 
     .app-nav a {
       color: var(--muted-color);
+      font-size: var(--nav-link-size);
+      font-weight: var(--nav-link-weight);
+      letter-spacing: -0.01em;
     }
 
     .app-nav {
@@ -354,6 +359,10 @@
     }
 
     @media screen and (max-width: 768px) {
+      .app-nav a {
+        font-size: 1rem;
+      }
+
       .app-nav {
         width: auto;
         max-width: 100%;
