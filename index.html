@@ -17,6 +17,7 @@
       --muted-color: #475569;
       --link-color: #0f766e;
       --nav-safe-right: 14rem;
+      --nav-shift-left: 4.75rem;
       --sidebar-width: 320px;
       --sidebar-border-color: #dbe4ee;
       --heading-color: #0f172a;
@@ -340,7 +341,7 @@
     @media screen and (min-width: 769px) {
       .app-nav {
         padding: 0.85rem 1.25rem 0.35rem;
-        transform: translateX(calc(var(--nav-safe-right) * -0.18));
+        transform: translateX(calc(var(--nav-shift-left) * -1));
       }
 
       .sidebar {

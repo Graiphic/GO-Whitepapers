@@ -92,4 +92,10 @@ foreach ($token in @("width: fit-content", "max-width: calc(100% - var(--nav-saf
     }
 }
 
+foreach ($token in @("--nav-shift-left", "translateX(calc(var(--nav-shift-left) * -1))")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing explicit desktop left offset for top navigation: $token"
+    }
+}
+
 Write-Host "GitHub Pages smoke checks passed."
