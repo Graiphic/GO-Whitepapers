@@ -33,35 +33,35 @@ Use the sidebar to jump directly between documents or open the PDF versions from
 <div class="go-grid">
   <div class="go-card">
     <h3>SOTA GO</h3>
-    <p><strong>Theme:</strong> ONNX-native authoring, compilation, and orchestration inside LabVIEW.</p>
-    <p>The foundational visual environment for building, training, deploying, and orchestrating ONNX graphs across the Graiphic stack.</p>
     <a class="go-card-cover-link" href="./SOTA%20GO/README.md">
       <img class="go-card-cover" src="./SOTA%20GO/SOTA%20GO_cover.png" alt="SOTA GO cover" />
     </a>
+    <p><strong>Theme:</strong> ONNX-native authoring, compilation, and orchestration inside LabVIEW.</p>
+    <p>The foundational visual environment for building, training, deploying, and orchestrating ONNX graphs across the Graiphic stack.</p>
   </div>
   <div class="go-card">
     <h3>GO HW</h3>
-    <p><strong>Theme:</strong> Hardware orchestration through ONNX.</p>
-    <p>Extends the graph model beyond inference into deterministic orchestration of I/O, DMA, timing, and heterogeneous hardware targets.</p>
     <a class="go-card-cover-link" href="./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/README.md">
       <img class="go-card-cover" src="./GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/GO-HW_cover.PNG" alt="GO HW cover" />
     </a>
+    <p><strong>Theme:</strong> Hardware orchestration through ONNX.</p>
+    <p>Extends the graph model beyond inference into deterministic orchestration of I/O, DMA, timing, and heterogeneous hardware targets.</p>
   </div>
   <div class="go-card">
     <h3>GO GenAI</h3>
-    <p><strong>Theme:</strong> Unified orchestration of Generative AI through ONNX.</p>
-    <p>Transforms fragmented GenAI stacks into a single graph-based system that combines models, tokenizers, logic, memory, and runtime orchestration.</p>
     <a class="go-card-cover-link" href="./GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/README.md">
       <img class="go-card-cover" src="./GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/GO-GenAI_cover.PNG" alt="GO GenAI cover" />
     </a>
+    <p><strong>Theme:</strong> Unified orchestration of Generative AI through ONNX.</p>
+    <p>Transforms fragmented GenAI stacks into a single graph-based system that combines models, tokenizers, logic, memory, and runtime orchestration.</p>
   </div>
   <div class="go-card">
     <h3>GO IML</h3>
-    <p><strong>Theme:</strong> Informed Machine Learning inside the ONNX graph.</p>
-    <p>Introduces a knowledge-aware training and deployment approach where physics, logic, constraints, and expert priors become native graph elements.</p>
     <a class="go-card-cover-link" href="./GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/README.md">
       <img class="go-card-cover" src="./GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/GO%20IML_cover.png" alt="GO IML cover" />
     </a>
+    <p><strong>Theme:</strong> Informed Machine Learning inside the ONNX graph.</p>
+    <p>Introduces a knowledge-aware training and deployment approach where physics, logic, constraints, and expert priors become native graph elements.</p>
   </div>
 </div>
 
