@@ -103,6 +103,12 @@ foreach ($token in @("var validSearchPaths =", "paths: validSearchPaths", "funct
     }
 }
 
+foreach ($token in @('README$/i.test(normalized)', 'normalized += ".md";')) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing expected Docsify README route normalization token: $token"
+    }
+}
+
 foreach ($token in @("function updateRenderContextLinks", 'data-render-context', 'updateRenderContextLinks("pages")', ".markdown-section .go-pages-link", "display: none !important")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing expected contextual README link toggle support: $token"

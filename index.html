@@ -509,7 +509,9 @@
         normalized = "/" + normalized;
       }
 
-      if (!/\.md$/i.test(normalized)) {
+      if (/\/README$/i.test(normalized)) {
+        normalized += ".md";
+      } else if (!/\.md$/i.test(normalized)) {
         if (!normalized.endsWith("/")) {
           normalized += "/";
         }
