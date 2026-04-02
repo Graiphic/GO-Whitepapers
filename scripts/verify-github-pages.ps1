@@ -52,9 +52,26 @@ foreach ($token in @("GO Whitepaper Series", "SOTA GO", "GO HW", "GO GenAI", "GO
     }
 }
 
+foreach ($token in @(
+    'data-render-target="github"',
+    'https://graiphic.github.io/GO-Whitepapers/',
+    'data-render-target="pages"',
+    'https://github.com/Graiphic/GO-Whitepapers'
+)) {
+    if ($rootReadme -notmatch [regex]::Escape($token)) {
+        throw "Root README.md is missing expected contextual repository/pages link token: $token"
+    }
+}
+
 foreach ($token in @("function resolveLocalAssetUrl", "function resolveLocalDocLink", "function resolveLocalAssetHref", "hook.beforeEach", "hook.doneEach")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing expected Docsify asset/link rewrite hook: $token"
+    }
+}
+
+foreach ($token in @("function updateRenderContextLinks", 'data-render-context', 'updateRenderContextLinks("pages")')) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing expected contextual README link toggle support: $token"
     }
 }
 

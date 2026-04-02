@@ -290,6 +290,20 @@
       font-weight: 700;
     }
 
+    .markdown-section .go-context-link {
+      margin-top: 1rem;
+      padding: 0.95rem 1.1rem;
+      border: 1px solid var(--surface-border);
+      border-left: 4px solid var(--theme-color);
+      border-radius: 14px;
+      background: var(--panel-bg-soft);
+      color: var(--body-color);
+    }
+
+    .markdown-section .go-context-link a {
+      font-weight: 700;
+    }
+
     .markdown-section .go-actions {
       display: flex;
       flex-wrap: wrap;
@@ -445,6 +459,14 @@
 
     ensureThemeToggle();
 
+    function updateRenderContextLinks(context) {
+      var nextContext = context === "pages" ? "pages" : "github";
+      document.documentElement.setAttribute("data-render-context", nextContext);
+      document.querySelectorAll("[data-render-target]").forEach(function (element) {
+        element.hidden = element.getAttribute("data-render-target") !== nextContext;
+      });
+    }
+
     function normalizeDocPath(path) {
       var normalized = path || "/README.md";
       normalized = normalized.split("?")[0].split("#")[0];
@@ -598,6 +620,8 @@
 
           hook.doneEach(function () {
             var currentFile = currentFileFromRoute(vm);
+
+            updateRenderContextLinks("pages");
 
             document.querySelectorAll(".markdown-section a[href], .cover-main a[href], .app-nav a[href], .sidebar-nav a[href]").forEach(function (anchor) {
               var rawHref = anchor.getAttribute("href");
