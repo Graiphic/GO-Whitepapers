@@ -119,6 +119,12 @@ foreach ($token in @(".sidebar .app-sub-sidebar li:before", "content: none")) {
     }
 }
 
+foreach ($token in @(".sidebar-toggle {", "background: var(--sidebar-bg);", "border-top: 1px solid var(--surface-border);", "body.close .sidebar-toggle")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing expected themed mobile sidebar toggle token: $token"
+    }
+}
+
 foreach ($token in @(".sidebar .app-sub-sidebar a", '.sidebar-nav a[href$=".pdf"]', "text-underline-offset")) {
     if ($indexHtml -match [regex]::Escape($token)) {
         throw "index.html should not force emphasized sidebar link styling token: $token"
