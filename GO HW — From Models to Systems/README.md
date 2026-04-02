@@ -115,7 +115,7 @@ These nodes turn the graph into a **system-level orchestrator**, capable of unif
 
 ---
 
-# 🖥️ 5. Direct Hardware Deployment  
+# 5. Direct Hardware Deployment  
 ### The graph becomes the program
 
 With GO HW:
