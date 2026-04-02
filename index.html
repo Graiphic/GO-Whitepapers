@@ -130,6 +130,19 @@
       color: var(--theme-color);
     }
 
+    .sidebar .app-sub-sidebar a,
+    .sidebar-nav a[href$=".pdf"] {
+      color: var(--link-color);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.12em;
+    }
+
+    .sidebar .app-sub-sidebar a:hover,
+    .sidebar-nav a[href$=".pdf"]:hover {
+      color: var(--theme-color);
+    }
+
     .sidebar .app-sub-sidebar li:before {
       content: none;
       display: none;

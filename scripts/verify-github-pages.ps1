@@ -106,6 +106,12 @@ foreach ($token in @(".sidebar .app-sub-sidebar li:before", "content: none")) {
     }
 }
 
+foreach ($token in @(".sidebar .app-sub-sidebar a", '.sidebar-nav a[href$=".pdf"]', "text-underline-offset")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing expected sidebar link emphasis token: $token"
+    }
+}
+
 foreach ($token in @("<html lang=""en"" data-theme=""dark"">", "return ""dark"";")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing expected default dark mode behavior token: $token"
