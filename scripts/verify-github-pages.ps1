@@ -120,8 +120,8 @@ foreach ($token in @(".sidebar .app-sub-sidebar li:before", "content: none")) {
 }
 
 foreach ($token in @(".sidebar .app-sub-sidebar a", '.sidebar-nav a[href$=".pdf"]', "text-underline-offset")) {
-    if ($indexHtml -notmatch [regex]::Escape($token)) {
-        throw "index.html is missing expected sidebar link emphasis token: $token"
+    if ($indexHtml -match [regex]::Escape($token)) {
+        throw "index.html should not force emphasized sidebar link styling token: $token"
     }
 }
 
