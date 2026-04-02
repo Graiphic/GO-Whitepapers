@@ -616,6 +616,119 @@
       return resolveLocalAssetUrl(candidate, currentFile);
     }
 
+    var validSearchPaths = [
+      "/README.md",
+      "/SOTA%20GO/README.md",
+      "/GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/README.md",
+      "/GO%20GenAI%20%E2%80%94%20From%20Fragmentation%20to%20Orchestration/README.md",
+      "/GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/README.md"
+    ];
+
+    var validSearchPathSet = validSearchPaths.reduce(function (accumulator, path) {
+      accumulator[path] = true;
+      return accumulator;
+    }, {});
+
+    function extractDocsifyHrefParts(rawHref) {
+      if (!rawHref) {
+        return null;
+      }
+
+      var hash = rawHref;
+      try {
+        hash = new URL(rawHref, window.location.href).hash || rawHref;
+      } catch (error) {
+      }
+
+      if (!hash.startsWith("#/")) {
+        return null;
+      }
+
+      var route = hash.slice(1);
+      var routeParts = route.split("?id=", 2);
+      var path = normalizeDocPath(routeParts[0]);
+      var anchorId = routeParts.length > 1 ? routeParts[1] : "";
+
+      return {
+        path: path,
+        anchorId: anchorId
+      };
+    }
+
+    function canonicalizeSearchResultHref(rawHref) {
+      var hrefParts = extractDocsifyHrefParts(rawHref);
+      if (!hrefParts || !validSearchPathSet[hrefParts.path]) {
+        return null;
+      }
+
+      var canonicalHref = "#" + hrefParts.path;
+      if (hrefParts.anchorId) {
+        canonicalHref += "?id=" + hrefParts.anchorId;
+      }
+
+      return canonicalHref;
+    }
+
+    function sanitizeSearchResults() {
+      var resultsPanel = document.querySelector(".search .results-panel");
+      if (!resultsPanel || resultsPanel.dataset.sanitizing === "true") {
+        return;
+      }
+
+      var matchingPosts = Array.prototype.slice.call(resultsPanel.querySelectorAll(".matching-post"));
+      if (!matchingPosts.length) {
+        return;
+      }
+
+      resultsPanel.dataset.sanitizing = "true";
+      try {
+        var visibleCount = 0;
+
+        matchingPosts.forEach(function (post) {
+          var anchor = post.querySelector("a[href]");
+          var canonicalHref = anchor ? canonicalizeSearchResultHref(anchor.getAttribute("href")) : null;
+
+          if (!anchor || !canonicalHref) {
+            post.remove();
+            return;
+          }
+
+          anchor.setAttribute("href", canonicalHref);
+          visibleCount += 1;
+        });
+
+        if (visibleCount === 0) {
+          resultsPanel.innerHTML = '<p class="empty">No matching section found.</p>';
+        }
+      } finally {
+        resultsPanel.dataset.sanitizing = "false";
+      }
+    }
+
+    function ensureSearchResultsFilter() {
+      var resultsPanel = document.querySelector(".search .results-panel");
+      if (!resultsPanel) {
+        return;
+      }
+
+      if (resultsPanel.dataset.searchFilterBound === "true") {
+        sanitizeSearchResults();
+        return;
+      }
+
+      var observer = new MutationObserver(function () {
+        sanitizeSearchResults();
+      });
+
+      observer.observe(resultsPanel, {
+        childList: true,
+        subtree: true
+      });
+
+      resultsPanel.dataset.searchFilterBound = "true";
+      sanitizeSearchResults();
+    }
+
     window.$docsify = {
       name: "Graiphic GO Whitepapers",
       repo: "Graiphic/GO-Whitepapers",
@@ -631,6 +744,7 @@
         "/.*/_navbar.md": "/_navbar.md"
       },
       search: {
+        paths: validSearchPaths,
         placeholder: "Search whitepapers",
         noData: "No matching section found.",
         depth: 3
@@ -656,6 +770,7 @@
             var currentFile = currentFileFromRoute(vm);
 
             updateRenderContextLinks("pages");
+            ensureSearchResultsFilter();
 
             document.querySelectorAll(".markdown-section a[href], .cover-main a[href], .app-nav a[href], .sidebar-nav a[href]").forEach(function (anchor) {
               var rawHref = anchor.getAttribute("href");

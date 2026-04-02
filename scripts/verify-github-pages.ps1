@@ -97,6 +97,12 @@ foreach ($token in @("function resolveLocalAssetUrl", "function resolveLocalDocL
     }
 }
 
+foreach ($token in @("var validSearchPaths =", "paths: validSearchPaths", "function canonicalizeSearchResultHref", "function sanitizeSearchResults", "MutationObserver", '.search .results-panel')) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing expected search result filtering token: $token"
+    }
+}
+
 foreach ($token in @("function updateRenderContextLinks", 'data-render-context', 'updateRenderContextLinks("pages")', ".markdown-section .go-pages-link", "display: none !important")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing expected contextual README link toggle support: $token"
