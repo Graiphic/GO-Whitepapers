@@ -109,6 +109,12 @@ foreach ($token in @('README$/i.test(normalized)', 'normalized += ".md";')) {
     }
 }
 
+foreach ($token in @("function canonicalizeDocPath", "decodeURIComponent", "encodeURI", "namespace: ""go-whitepapers-search-v2""")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing expected canonical search path token: $token"
+    }
+}
+
 foreach ($token in @("function updateRenderContextLinks", 'data-render-context', 'updateRenderContextLinks("pages")', ".markdown-section .go-pages-link", "display: none !important")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing expected contextual README link toggle support: $token"

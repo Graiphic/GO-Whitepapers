@@ -626,8 +626,19 @@
       "/GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/README.md"
     ];
 
+    function canonicalizeDocPath(path) {
+      var normalized = normalizeDocPath(path);
+
+      try {
+        normalized = decodeURIComponent(normalized);
+      } catch (error) {
+      }
+
+      return encodeURI(normalized).replace(/\/+/g, "/");
+    }
+
     var validSearchPathSet = validSearchPaths.reduce(function (accumulator, path) {
-      accumulator[path] = true;
+      accumulator[canonicalizeDocPath(path)] = true;
       return accumulator;
     }, {});
 
@@ -659,11 +670,13 @@
 
     function canonicalizeSearchResultHref(rawHref) {
       var hrefParts = extractDocsifyHrefParts(rawHref);
-      if (!hrefParts || !validSearchPathSet[hrefParts.path]) {
+      var canonicalPath = hrefParts ? canonicalizeDocPath(hrefParts.path) : null;
+
+      if (!hrefParts || !canonicalPath || !validSearchPathSet[canonicalPath]) {
         return null;
       }
 
-      var canonicalHref = "#" + hrefParts.path;
+      var canonicalHref = "#" + canonicalPath;
       if (hrefParts.anchorId) {
         canonicalHref += "?id=" + hrefParts.anchorId;
       }
@@ -747,6 +760,7 @@
       },
       search: {
         paths: validSearchPaths,
+        namespace: "go-whitepapers-search-v2",
         placeholder: "Search whitepapers",
         noData: "No matching section found.",
         depth: 3
