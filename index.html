@@ -16,6 +16,7 @@
       --body-color: #1f2937;
       --muted-color: #475569;
       --link-color: #0f766e;
+      --nav-safe-right: 14rem;
       --sidebar-width: 320px;
       --sidebar-border-color: #dbe4ee;
       --heading-color: #0f172a;
@@ -127,6 +128,23 @@
 
     .app-nav a {
       color: var(--muted-color);
+    }
+
+    .app-nav {
+      border-bottom: 1px solid var(--surface-border);
+      background: var(--panel-bg-soft);
+    }
+
+    .app-nav ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      width: 100%;
+    }
+
+    .app-nav li {
+      margin: 0;
     }
 
     .markdown-section {
@@ -316,6 +334,10 @@
     }
 
     @media screen and (min-width: 769px) {
+      .app-nav {
+        padding: 0.9rem calc(var(--nav-safe-right) + 1.75rem) 0.75rem 1.25rem;
+      }
+
       .sidebar {
         width: var(--sidebar-width);
       }
@@ -326,6 +348,11 @@
     }
 
     @media screen and (max-width: 768px) {
+      .app-nav ul {
+        justify-content: flex-start;
+        gap: 0.45rem;
+      }
+
       .theme-toggle {
         top: auto;
         right: 14px;

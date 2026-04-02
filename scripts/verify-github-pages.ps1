@@ -80,4 +80,10 @@ foreach ($token in @(".markdown-section h1 a", ".markdown-section h2 a", ".markd
     }
 }
 
+foreach ($token in @("--nav-safe-right", ".app-nav ul", ".app-nav li", "justify-content: center")) {
+    if ($indexHtml -notmatch [regex]::Escape($token)) {
+        throw "index.html is missing top navigation spacing layout token: $token"
+    }
+}
+
 Write-Host "GitHub Pages smoke checks passed."
