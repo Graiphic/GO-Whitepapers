@@ -12,10 +12,7 @@
     <span class="go-chip">Hardware Abstraction</span>
     <span class="go-chip">Informed Machine Learning</span>
   </div>
-  <div class="go-actions">
-    <a class="go-button" href="#/SOTA%20GO/README.md">Browse Whitepapers</a>
-    <a class="go-button" href="https://github.com/Graiphic/GO-Whitepapers" target="_blank" rel="noopener noreferrer">Open Repository</a>
-  </div>
+  
 </div>
 
 ## Collection Overview
