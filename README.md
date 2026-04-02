@@ -1,5 +1,7 @@
 <div class="go-pages-link" data-render-target="github">
-  <a href="https://graiphic.github.io/GO-Whitepapers/">View this repository as a GitHub Pages site</a>
+  <a href="https://graiphic.github.io/GO-Whitepapers/">
+    <img src="./assets/open-github-pages-banner.svg" alt="Open the GitHub Pages version" />
+  </a>
 </div>
 
 # Graiphic GO Whitepaper Series

@@ -7,7 +7,8 @@ $requiredFiles = @(
     "index.html",
     "404.html",
     "_sidebar.md",
-    "_navbar.md"
+    "_navbar.md",
+    "assets\\open-github-pages-banner.svg"
 )
 
 $whitepaperFolders = @(
@@ -54,9 +55,7 @@ foreach ($token in @("GO Whitepaper Series", "SOTA GO", "GO HW", "GO GenAI", "GO
 
 foreach ($token in @(
     '<div class="go-pages-link" data-render-target="github">',
-    'data-render-target="github"',
-    'View this repository as a GitHub Pages site',
-    'https://graiphic.github.io/GO-Whitepapers/',
+    './assets/open-github-pages-banner.svg',
     '# Graiphic GO Whitepaper Series'
 )) {
     if ($rootReadme -notmatch [regex]::Escape($token)) {
@@ -74,7 +73,7 @@ foreach ($token in @("function resolveLocalAssetUrl", "function resolveLocalDocL
     }
 }
 
-foreach ($token in @("function updateRenderContextLinks", 'data-render-context', 'updateRenderContextLinks("pages")', ".markdown-section .go-pages-link", "#cf222e")) {
+foreach ($token in @("function updateRenderContextLinks", 'data-render-context', 'updateRenderContextLinks("pages")', ".markdown-section .go-pages-link", "display: none !important")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing expected contextual README link toggle support: $token"
     }
