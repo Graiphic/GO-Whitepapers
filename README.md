@@ -54,8 +54,8 @@ Use the sidebar to jump directly between documents or open the PDF versions from
 
   <div class="go-card">
     <h3>FROG</h3>
-    <a class="go-card-cover-link" href="./FROG%20%E2%80%94%20Opening%20the%20Next%20Era%20of%20Graphical%20System%20Programming/README.md">
-      <img class="go-card-cover" src="./FROG%20%E2%80%94%20Opening%20the%20Next%20Era%20of%20Graphical%20System%20Programming/FROG_cover.png" alt="FROG cover" width="240" />
+    <a class="go-card-cover-link" href="./FROG%20-%20Opening%20the%20Next%20Era%20of%20Graphical/Readme.md">
+      <img class="go-card-cover" src="./FROG%20-%20Opening%20the%20Next%20Era%20of%20Graphical/FROG_cover2.png" alt="FROG cover" width="240" />
     </a>
     <p><strong>Theme:</strong> Open graphical dataflow language infrastructure.</p>
     <p>Moves the Graiphic graph-orchestration vision to the language layer itself: <code>.frog</code> source, validated meaning, open FIR, runtime families, compiler corridors, hardware bridges, and AI-era inspectability.</p>
@@ -100,9 +100,10 @@ GO HW extends ONNX beyond model execution into deterministic system orchestratio
 
 FROG is the continuation of the GO HW ambition on stronger ground. It moves Graiphic's graph-orchestration vision from a LabVIEW-orchestrated corridor to an open graphical dataflow language foundation: canonical `.frog` source, validated meaning, open FIR, lowering, backend contracts, runtime families, compiler corridors, hardware bridges, front panels, widgets, and AI-era inspectability.
 
-- [Open the FROG page](./FROG%20%E2%80%94%20Opening%20the%20Next%20Era%20of%20Graphical%20System%20Programming/README.md)
-- [Download the FROG PDF](./FROG%20%E2%80%94%20Opening%20the%20Next%20Era%20of%20Graphical%20System%20Programming/FROG_Whitepaper_1.0.pdf)
+- [Open the FROG page](./FROG%20-%20Opening%20the%20Next%20Era%20of%20Graphical/Readme.md)
+- [Download the FROG PDF](./FROG%20-%20Opening%20the%20Next%20Era%20of%20Graphical/FROG_Whitepaper_1.0.pdf)
 - [Open the FROG specification repository](https://github.com/Graiphic/FROG)
+- [Open the FROG specification GitHub Pages](https://graiphic.github.io/FROG/)
 
 ### 4. GO GenAI - From Fragmentation to Orchestration
 
@@ -131,3 +132,42 @@ GO HW
 
 FROG
   -> open graphical dataflow language infrastructure for the AI era
+```
+
+FROG does not remove the SOTA and GO HW technology layers from Graiphic's roadmap. It gives them a deeper and freer foundation. Model execution, graph execution, graph orchestration, hardware primitives, target profiles, monitoring, energy-aware execution, and runtime supervision remain in scope. The difference is that those capabilities are intended to move from a LabVIEW-orchestrated corridor into Graiphic's own open graphical language stack.
+
+## Repository Layout
+
+```text
+GO-Whitepapers/
+├── README.md
+├── _sidebar.md
+├── _navbar.md
+├── assets/
+├── SOTA GO/
+├── GO HW — From Models to Systems/
+├── FROG - Opening the Next Era of Graphical/
+│   ├── Readme.md
+│   ├── FROG_Whitepaper_1.0.pdf
+│   ├── FROG_cover2.png
+│   └── frog-orville-chart.png
+├── GO GenAI — From Fragmentation to Orchestration/
+└── GO IML — From Theory to Superiority/
+```
+
+## Learn More
+
+- Website: [graiphic.io](https://www.graiphic.io)
+- YouTube: [@graiphic](https://www.youtube.com/@graiphic)
+- News and Insights: [graiphic.io/news-insights](https://graiphic.io/news-insights/)
+- FROG specification: [github.com/Graiphic/FROG](https://github.com/Graiphic/FROG)
+
+## Contact
+
+- [hello@graiphic.io](mailto:hello@graiphic.io)
+- [funding@graiphic.io](mailto:funding@graiphic.io)
+
+## License
+
+Released under **CC BY-NC-SA 4.0**  
+© 2026 Graiphic - https://www.graiphic.io
