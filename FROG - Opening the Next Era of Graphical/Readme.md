@@ -1,3 +1,9 @@
+<div align="center" class="go-pages-link" data-render-target="github">
+  <a href="https://graiphic.github.io/GO-Whitepapers/#/FROG%20-%20Opening%20the%20Next%20Era%20of%20Graphical/Readme">
+    <img src="../assets/open-github-pages-banner.svg" alt="Open the GitHub Pages version" width="640" />
+  </a>
+</div>
+
 <p align="center">
   <img src="./FROG_cover2.png" alt="FROG whitepaper cover" width="340" />
 </p>
@@ -10,6 +16,7 @@
 
 <p align="center">
   <a href="./FROG_Whitepaper_1.0.pdf">Download the PDF</a> ·
+  <a href="./Heilmeier.md">Heilmeier framing</a> ·
   <a href="https://github.com/Graiphic/FROG">FROG specification repository</a> ·
   <a href="../README.md">GO Whitepaper Series</a>
 </p>
@@ -37,10 +44,11 @@ The objective is to open a new category of industrial programming infrastructure
 
 <hr/>
 
-<h2>Download</h2>
+<h2>Download and Navigation</h2>
 
 <ul>
   <li><a href="./FROG_Whitepaper_1.0.pdf">Download the FROG whitepaper PDF</a></li>
+  <li><a href="./Heilmeier.md">Open the FROG Heilmeier framing</a></li>
   <li><a href="https://github.com/Graiphic/FROG">Open the FROG specification repository</a></li>
   <li><a href="https://graiphic.github.io/FROG/">Open the FROG specification GitHub Pages</a></li>
   <li><a href="../README.md">Return to the Graiphic GO Whitepaper Series</a></li>
@@ -48,7 +56,29 @@ The objective is to open a new category of industrial programming infrastructure
 
 <hr/>
 
-<h2>Why This Whitepaper Exists</h2>
+<h2>Contents</h2>
+
+<ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#download-and-navigation">Download and Navigation</a></li>
+  <li><a href="#why-this-whitepaper-exists">Why This Whitepaper Exists</a></li>
+  <li><a href="#heilmeier-framing">Heilmeier Framing</a></li>
+  <li><a href="#the-missing-zone-frog-targets">The Missing Zone FROG Targets</a></li>
+  <li><a href="#main-thesis">Main Thesis</a></li>
+  <li><a href="#what-frog-adds-to-the-go-trajectory">What FROG Adds to the GO Trajectory</a></li>
+  <li><a href="#why-frog-matters-in-the-ai-era">Why FROG Matters in the AI Era</a></li>
+  <li><a href="#what-makes-frog-different">What Makes FROG Different</a></li>
+  <li><a href="#current-public-proof">Current Public Proof</a></li>
+  <li><a href="#relationship-with-the-frog-specification-repository">Relationship with the FROG Specification Repository</a></li>
+  <li><a href="#who-should-read-this-whitepaper">Who Should Read This Whitepaper?</a></li>
+  <li><a href="#call-for-ecosystem-participation">Call for Ecosystem Participation</a></li>
+  <li><a href="#repository-contents">Repository Contents</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+<hr/>
+
+<h2 id="why-this-whitepaper-exists">Why This Whitepaper Exists</h2>
 
 <p>
 FROG should be read as a continuation of Graiphic’s graph-orchestration trajectory, not as a replacement for it.
@@ -82,7 +112,26 @@ the language remains upstream, while execution becomes modular downstream.
 
 <hr/>
 
-<h2>The Missing Zone FROG Targets</h2>
+<h2 id="heilmeier-framing">Heilmeier Framing</h2>
+
+<p>
+The companion <a href="./Heilmeier.md">FROG Heilmeier framing</a> explains the program logic behind the whitepaper in a mission-oriented format.
+It clarifies what Graiphic is trying to do, why the problem matters now, what is new, who should care, what success would change, and what still needs to be proved.
+</p>
+
+<p>
+The Heilmeier page should be read as the strategic bridge between the whitepaper and the public FROG specification repository.
+It does not replace the normative specification.
+It explains why FROG matters as a technological program: open graphical dataflow, post-AI accountability, open FIR, runtime and compiler modularity, hardware agnosticism, ecosystem participation, and industrial sovereignty.
+</p>
+
+<ul>
+  <li><a href="./Heilmeier.md">Open the FROG Heilmeier framing</a></li>
+</ul>
+
+<hr/>
+
+<h2 id="the-missing-zone-frog-targets">The Missing Zone FROG Targets</h2>
 
 <p align="center">
   <img src="./frog-orville-chart.png" alt="FROG positioning chart" width="640" />
@@ -109,7 +158,7 @@ The graphical interface can expose the same program as nodes, wires, front panel
 
 <hr/>
 
-<h2>Main Thesis</h2>
+<h2 id="main-thesis">Main Thesis</h2>
 
 <blockquote>
   <p>
@@ -127,7 +176,7 @@ It is a proposal for an open industrial language stack where the saved source is
 
 <hr/>
 
-<h2>What FROG Adds to the GO Trajectory</h2>
+<h2 id="what-frog-adds-to-the-go-trajectory">What FROG Adds to the GO Trajectory</h2>
 
 <h3>SOTA GO</h3>
 
@@ -174,7 +223,7 @@ The difference is that these capabilities are intended to move from a LabVIEW-or
 
 <hr/>
 
-<h2>Why FROG Matters in the AI Era</h2>
+<h2 id="why-frog-matters-in-the-ai-era">Why FROG Matters in the AI Era</h2>
 
 <p>
 Generative AI makes software faster to produce, but not automatically easier to inspect.
@@ -199,7 +248,7 @@ machines can generate structured <code>.frog</code> source, and humans can inspe
 
 <hr/>
 
-<h2>What Makes FROG Different</h2>
+<h2 id="what-makes-frog-different">What Makes FROG Different</h2>
 
 <table>
   <thead>
@@ -250,7 +299,7 @@ machines can generate structured <code>.frog</code> source, and humans can inspe
 
 <hr/>
 
-<h2>Current Public Proof</h2>
+<h2 id="current-public-proof">Current Public Proof</h2>
 
 <p>
 The FROG specification repository already defines a layered language architecture and includes bounded proof corridors.
@@ -281,10 +330,10 @@ It shows corridor integrity from source to execution-facing artifacts and runtim
 
 <hr/>
 
-<h2>Relationship with the FROG Specification Repository</h2>
+<h2 id="relationship-with-the-frog-specification-repository">Relationship with the FROG Specification Repository</h2>
 
 <p>
-This whitepaper is strategic and explanatory.
+This whitepaper and the companion Heilmeier page are strategic and explanatory.
 The normative specification work lives in the FROG repository.
 </p>
 
@@ -294,11 +343,12 @@ The normative specification work lives in the FROG repository.
   <li><a href="https://github.com/Graiphic/FROG/tree/main/IR">FROG IR architecture</a></li>
   <li><a href="https://github.com/Graiphic/FROG/tree/main/Examples/05_bounded_ui_accumulator">Example 05 bounded corridor</a></li>
   <li><a href="https://github.com/Graiphic/FROG/tree/main/Implementations/Reference/Runtime">Reference runtime family</a></li>
+  <li><a href="./Heilmeier.md">FROG Heilmeier framing in this repository</a></li>
 </ul>
 
 <hr/>
 
-<h2>Who Should Read This Whitepaper?</h2>
+<h2 id="who-should-read-this-whitepaper">Who Should Read This Whitepaper?</h2>
 
 <ul>
   <li>senior technical leaders,</li>
@@ -315,7 +365,7 @@ The normative specification work lives in the FROG repository.
 
 <hr/>
 
-<h2>Call for Ecosystem Participation</h2>
+<h2 id="call-for-ecosystem-participation">Call for Ecosystem Participation</h2>
 
 <p>
 Graiphic is actively seeking partners who want to help shape the next era of open graphical dataflow programming.
@@ -340,18 +390,19 @@ and ambitious enough to reshape how industrial software is generated, understood
 
 <hr/>
 
-<h2>Repository Contents</h2>
+<h2 id="repository-contents">Repository Contents</h2>
 
-<pre><code>FROG — Opening the Next Era of Graphical System Programming/
-├── README.md
+<pre><code>FROG - Opening the Next Era of Graphical/
+├── Readme.md
+├── Heilmeier.md
 ├── FROG_Whitepaper_1.0.pdf
-├── FROG_cover.png
+├── FROG_cover2.png
 └── frog-orville-chart.png
 </code></pre>
 
 <hr/>
 
-<h2>Contact</h2>
+<h2 id="contact">Contact</h2>
 
 <ul>
   <li>Website: <a href="https://www.graiphic.io">graiphic.io</a></li>
