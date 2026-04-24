@@ -1,11 +1,7 @@
-<div class="go-pages-link" data-render-target="github">
-  <a href="https://graiphic.github.io/GO-Whitepapers/#/FROG%20-%20Opening%20the%20Next%20Era%20of%20Graphical/heilmeier">
-    <img src="../assets/open-github-pages-banner.svg" alt="Open the GitHub Pages version" width="640" />
-  </a>
-</div>
+
 
 <p align="center">
-  <img src="./FROG_cover2.png" alt="FROG whitepaper cover" width="640" />
+  <img src="./FROG_cover2.png" alt="FROG whitepaper cover" width="240" />
 </p>
 
 <h1 align="center">FROG — Heilmeier Framing</h1>
