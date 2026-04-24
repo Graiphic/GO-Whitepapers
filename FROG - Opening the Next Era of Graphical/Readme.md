@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./FROG_cover2.png" alt="FROG whitepaper cover" width="640" />
+  <img src="./FROG_cover2.png" alt="FROG whitepaper cover" width="340" />
 </p>
 
 <h1 align="center">FROG — Opening the Next Era of Graphical System Programming</h1>
