@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <img src="./FROG_cover2.png" alt="FROG whitepaper cover" width="240" />
+  <img src="https://github.com/Graiphic/FROG/blob/main/FROG%20logo.svg" alt="FROG logo" width="140" />
 </p>
 
 <h1 align="center">FROG — Heilmeier Framing</h1>
