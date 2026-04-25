@@ -18,7 +18,7 @@
 
 <p align="center">
   <a href="./Readme.md">FROG whitepaper page</a> ·
-  <a href="./FROG_Whitepaper_1.0.pdf">Download the PDF</a> ·
+  <a href="./FROG_Whitepaper_1.2.pdf">Download the PDF</a> ·
   <a href="https://github.com/Graiphic/FROG">FROG specification repository</a>
 </p>
 
