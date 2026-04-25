@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <a href="./FROG_Whitepaper_1.0.pdf">Download the PDF</a> ·
+  <a href="./FROG_Whitepaper_1.2.pdf">Download the PDF</a> ·
   <a href="./Heilmeier.md">Heilmeier framing</a> ·
   <a href="https://github.com/Graiphic/FROG">FROG specification repository</a> ·
   <a href="../README.md">GO Whitepaper Series</a>
