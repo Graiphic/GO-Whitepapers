@@ -110,7 +110,7 @@ foreach ($token in @('README$/i.test(normalized)', 'normalized += ".md";')) {
     }
 }
 
-foreach ($token in @("function canonicalizeDocPath", "decodeURIComponent", "encodeURI", "namespace: ""go-whitepapers-search-v2""")) {
+foreach ($token in @("function canonicalizeDocPath", "decodeURIComponent", "encodeURI", "namespace: ""go-whitepapers-search-v3""")) {
     if ($indexHtml -notmatch [regex]::Escape($token)) {
         throw "index.html is missing expected canonical search path token: $token"
     }

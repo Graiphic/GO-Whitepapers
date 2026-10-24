@@ -9,10 +9,11 @@
 <div class="go-hero">
   <p><strong>Unified graph computing for AI, logic, hardware, open graphical dataflow, and deployable systems.</strong></p>
   <p>
-    This library gathers Graiphic's GO and FROG whitepapers into a single GitHub Pages experience.
+    This library gathers Graiphic's GO, FROG and Graiphic Studio whitepapers into a single GitHub Pages experience.
     The program starts from ONNX as a graph format, ONNX Runtime as an execution layer, and SOTA
     as a visual orchestration environment, then moves deeper with FROG toward an open graphical
-    dataflow language foundation.
+    dataflow language foundation. Graiphic Studio continues that trajectory with human control
+    of generated software, from graphical inspection to executable results.
   </p>
   <div class="go-chip-row">
     <span class="go-chip">Graph Computing</span>
@@ -59,6 +60,15 @@ Use the sidebar to jump directly between documents or open the PDF versions from
     </a>
     <p><strong>Theme:</strong> Open graphical dataflow language infrastructure.</p>
     <p>Moves the Graiphic graph-orchestration vision to the language layer itself: <code>.frog</code> source, validated meaning, open FIR, runtime families, compiler corridors, hardware bridges, and AI-era inspectability.</p>
+  </div>
+
+  <div class="go-card">
+    <h3>Graiphic Studio</h3>
+    <a class="go-card-cover-link" href="./Graiphic%20Studio%20-%20Dataflow%20Programming%20for%20the%20AI%20Era/README.md">
+      <img class="go-card-cover go-card-cover--full" src="./Graiphic%20Studio%20-%20Dataflow%20Programming%20for%20the%20AI%20Era/Graiphic_Studio_cover.png" alt="Graiphic Studio cover" width="240" />
+    </a>
+    <p><strong>Theme:</strong> Dataflow programming for human control of generated software.</p>
+    <p>Continues the FROG foundation with graphical inspection, runtime understanding, correction and compilation, and a research and industrial case for Human in the Loop and Trustworthy AI.</p>
   </div>
 
   <div class="go-card">
@@ -119,6 +129,14 @@ GO IML introduces Informed Machine Learning as a graph-native capability where p
 - [Open the GO IML page](./GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/README.md)
 - [Download the GO IML PDF](./GO%20IML%20%E2%80%94%20From%20Theory%20to%20Superiority/GO%20IML_Whitepaper_1.1.pdf)
 
+### 6. Graiphic Studio - Dataflow Programming for the AI Era
+
+Graiphic Studio carries the open FROG foundation into a proprietary engineering solution for human control of generated software. This first edition explains dataflow inspection, runtime highlighting, simulation direction, supported language imports, compiler bridges and the industrial and economic case for an integrated workflow.
+
+- [Open the Graiphic Studio page](./Graiphic%20Studio%20-%20Dataflow%20Programming%20for%20the%20AI%20Era/README.md)
+- [Download the Graiphic Studio PDF](./Graiphic%20Studio%20-%20Dataflow%20Programming%20for%20the%20AI%20Era/Graiphic_Studio_Whitepaper_1.0.pdf)
+- [Open the Graiphic Studio Heilmeier framing](./Graiphic%20Studio%20-%20Dataflow%20Programming%20for%20the%20AI%20Era/Heilmeier.md)
+
 ## Program Continuity
 
 The GO series and FROG should be read as a coherent trajectory:
@@ -136,6 +154,8 @@ FROG
 
 FROG does not remove the SOTA and GO HW technology layers from Graiphic's roadmap. It gives them a deeper and freer foundation. Model execution, graph execution, graph orchestration, hardware primitives, target profiles, monitoring, energy-aware execution, and runtime supervision remain in scope. The difference is that those capabilities are intended to move from a LabVIEW-orchestrated corridor into Graiphic's own open graphical language stack.
 
+Graiphic Studio develops the engineering experience around that foundation: inspecting generated logic, observing behaviour, making corrections and connecting accepted source to executable results. FROG remains the open language foundation while Studio is the proprietary product.
+
 ## Repository Layout
 
 ```text
@@ -151,6 +171,13 @@ GO-Whitepapers/
 │   ├── FROG_Whitepaper_1.0.pdf
 │   ├── FROG_cover2.png
 │   └── frog-orville-chart.png
+├── Graiphic Studio - Dataflow Programming for the AI Era/
+│   ├── README.md
+│   ├── Heilmeier.md
+│   ├── Graiphic_Studio_Whitepaper_1.0.pdf
+│   ├── Graiphic_Studio_cover.png
+│   ├── graiphic-studio-orville-chart.png
+│   └── figures/
 ├── GO GenAI — From Fragmentation to Orchestration/
 └── GO IML — From Theory to Superiority/
 ```
