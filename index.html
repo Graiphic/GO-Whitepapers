@@ -516,10 +516,7 @@
       if (/\/README$/i.test(normalized)) {
         normalized += ".md";
       } else if (!/\.md$/i.test(normalized)) {
-        if (!normalized.endsWith("/")) {
-          normalized += "/";
-        }
-        normalized += "README.md";
+        normalized += normalized.endsWith("/") ? "README.md" : ".md";
       }
 
       return normalized.replace(/\/+/g, "/");
@@ -533,6 +530,17 @@
     function resolveLocalDocLink(rawHref, currentFile) {
       if (!rawHref) {
         return null;
+      }
+
+      // Docsify strips .md but retains explicit relative segments in hash links.
+      if (/^#\/\.\.?\//.test(rawHref)) {
+        var relativeRoute = rawHref.slice(2).split("?id=", 2);
+        var relativePath = relativeRoute[0];
+        if (!/\/$|\.[a-z0-9]+$/i.test(relativePath)) {
+          relativePath += ".md";
+        }
+        var rewrittenRoute = resolveLocalDocLink(relativePath, currentFile);
+        return rewrittenRoute && relativeRoute[1] ? rewrittenRoute + "?id=" + relativeRoute[1] : rewrittenRoute;
       }
 
       if (
@@ -608,7 +616,7 @@
       var candidate = rawHref;
 
       if (candidate.startsWith("#/")) {
-        candidate = candidate.slice(2);
+        candidate = /^#\/\.\.?\//.test(candidate) ? candidate.slice(2) : candidate.slice(1);
       } else if (candidate.startsWith("#")) {
         return null;
       }
