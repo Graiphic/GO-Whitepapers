@@ -6,7 +6,7 @@
 
 This page reproduces Appendix C of the whitepaper. Chapter references and source numbers refer to the complete document.
 
-**Project clarification — 11 November 2026:** The [general philosophy update](../Updates/2026-11-11-inspection-and-assurance.md) and [maintained FROG Heilmeier framing](https://github.com/Graiphic/FROG/blob/main/Strategy/Heilmeier/Readme.md) describe the overall project. Dedicated research and collaboration proposals are kept separately. The appendix reproduced below remains the October edition and retains its historical scope.
+**Philosophy clarification — 11 November 2026:** The [current direction](../Updates/2026-11-11-inspection-and-assurance.md) and [maintained FROG Heilmeier framing](https://github.com/Graiphic/FROG/blob/main/Strategy/Heilmeier/Readme.md) center human oversight of machine-generated code through FROG and graphical abstraction, with FIR/IR for supported execution. DARPA-specific research stays separate. The appendix below retains its October edition and historical scope.
 
 This appendix applies the eight questions of the Heilmeier framework to Graiphic’s programme. [31] It connects the industrial thesis to the proposed research, resources and evidence. The answers describe our direction and evaluation plan; they do not announce a funded programme, a delivery calendar or measured product results.
 

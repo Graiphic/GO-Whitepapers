@@ -1,4 +1,4 @@
-> **Project clarification — 11 November 2026:** Read the [general philosophy update](../Updates/2026-11-11-inspection-and-assurance.md) for visual programming, execution and maintenance, with dedicated collaboration ideas kept separately. The original whitepaper PDF remains unchanged and retains its own edition date.
+> **Philosophy clarification — 11 November 2026:** Read the [current project direction](../Updates/2026-11-11-inspection-and-assurance.md): human oversight of generated code through `.frog`, graphical abstraction and FIR/IR-based execution. DARPA collaboration options stay separate. The original whitepaper PDF retains its own edition date and bytes.
 
 <div align="center" class="go-pages-link" data-render-target="github">
   <a href="https://graiphic.github.io/GO-Whitepapers/#/FROG%20-%20Opening%20the%20Next%20Era%20of%20Graphical/Readme">

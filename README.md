@@ -26,7 +26,7 @@
 
 ## Current strategy clarification
 
-The [11 November 2026 clarification](Updates/2026-11-11-inspection-and-assurance.md) explains the general project: visual programming, understanding behavior and checking changes in an integrated environment. It carries forward the presentation's broadly useful ideas while keeping specialized collaboration proposals separate. Original PDFs retain their edition dates.
+The [11 November 2026 philosophy clarification](Updates/2026-11-11-inspection-and-assurance.md) centers the human capacity to follow and validate machine-generated code: a structured FROG model serialized in `.frog`, graphical abstraction for comprehension, and FIR/IR for efficient supported execution. DARPA collaboration options remain separate. Original PDFs retain their edition dates.
 
 ## Collection Overview
 

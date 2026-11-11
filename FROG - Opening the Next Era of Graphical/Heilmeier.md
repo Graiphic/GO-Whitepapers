@@ -2,7 +2,7 @@
 
 **Archived strategic framing accompanying whitepaper 1.2.** The original text below retains its historical scope and headings. It is not the current implementation status or the current eight-question programme framing.
 
-Read the [11 November 2026 general philosophy clarification](../Updates/2026-11-11-inspection-and-assurance.md) and the [maintained FROG Heilmeier framing](https://github.com/Graiphic/FROG/blob/main/Strategy/Heilmeier/Readme.md). They describe the overall graphical programming project and keep dedicated collaboration options separate. The current eight-question structure places impact with question 4 and risks, cost, duration and exams in questions 5–8. Historical references to a future first LLVM path retain their original date.
+Read the [11 November 2026 philosophy clarification](../Updates/2026-11-11-inspection-and-assurance.md) and [maintained FROG Heilmeier framing](https://github.com/Graiphic/FROG/blob/main/Strategy/Heilmeier/Readme.md). Their strategic focus is human oversight of generated code through `.frog`, graphical abstraction and qualified FIR/IR-based execution. Dedicated DARPA options remain separate. The current eight-question organization and attributed implementation status supersede their historical framing without rewriting the original text below.
 
 ---
 

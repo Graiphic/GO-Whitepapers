@@ -1,7 +1,7 @@
 - [GO Whitepaper Series](/)
 
 - **Updates**
-  - [Visual programming and human control — 11 November 2026](/Updates/2026-11-11-inspection-and-assurance.md)
+  - [Human oversight of code generation — 11 November 2026](/Updates/2026-11-11-inspection-and-assurance.md)
 
 - **Whitepapers**
   - [SOTA GO](/SOTA%20GO/README.md)

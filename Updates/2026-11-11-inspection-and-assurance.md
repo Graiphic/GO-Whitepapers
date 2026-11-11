@@ -1,41 +1,41 @@
-# Visual programming, understanding and change
+# Human oversight of machine-generated code
 
-**Project clarification · 11 November 2026**
+**Project philosophy clarification · 11 November 2026**
 
-This update connects the FROG and Graiphic Studio whitepapers to the general project philosophy. Original PDFs and reproduced appendices retain their edition dates and bytes. This page is an editorial clarification, not a new edition or implementation release.
+Graiphic's strategic objective is to increase the human capacity to follow, understand and validate software produced at machine scale. The premise is that code generation becomes routine while some engineering processes continue to require human review and acceptance. The cost of producing a candidate and the cost of understanding it do not automatically evolve together.
 
-## The general project
+Original whitepaper PDFs and reproduced appendices retain their edition dates and bytes. This page clarifies the current direction; it is not a new edition, implementation release or measured productivity result.
 
-Graiphic develops a graphical programming environment for building software, understanding its behavior and making changes whose results can be checked. FROG provides the open language and representation contracts. Studio is the proprietary environment that integrates authoring, navigation, execution observation and supported deployment.
+## A common model for machine production and human understanding
 
-The project serves everyday human programming and maintenance. Software inherited from a colleague or proposed by an AI tool creates the same need to connect relevant logic, actual behavior and a valid change. AI makes this need more visible while remaining one use case within a broader product.
+FROG supplies a structured program model serialized in `.frog`. Studio projects it into navigable graphical dataflow so a person can inspect relevant behavior and intervene. FIR and downstream IR connect the supported model to lowering, compilers and execution targets.
 
-## Ideas worth carrying into the product explanation
+The target architecture provides for direct FROG generation and progressively supported imports from existing languages. Every bridge must preserve its declared semantics, including types, state, memory, effects and external behavior. General C/C++/Rust/Java/Python imports remain future work; this direction is not a universal converter already delivered.
 
-| Idea | General value |
-| --- | --- |
-| A visual dimension for understanding | Connections, hierarchy, shapes, labels and spatial organization help people navigate relationships and relevant detail. |
-| Understanding connected to intervention | An engineer can examine logic, observe a supported execution and return to the place where a correction belongs. |
-| A complete calculator walkthrough | Familiar inputs and outputs make event handling, a queue, explicit state and Highlight concrete. |
-| A representation usable by people and tools | The open FROG foundation supports compatible tooling and independent implementations. |
-| Program meaning separated from deployment | Compiler and target bridges have explicit responsibilities, supported profiles and evidence. |
+FROG remains an open language foundation. Studio is the proprietary integrated product. The same environment supports direct human programming and maintenance while focusing strategically on the human oversight required as automated production grows.
 
-The calculator comparison illustrates representation and navigation. Its C version includes UI, parser and queue work; the diagram overview exposes selected architecture with access to cases. Source-line count and screen area alone do not establish a review-speed advantage. Evaluate relevant tasks, correct understanding, successful changes and effort.
+## The additional visual dimension
 
-## Existing foundation and development direction
+Connections, color, shape, position, text, arrangement and labels expose relationships together. Hierarchy makes an overview useful without removing access to necessary detail. Stable organization and meaningful change navigation should help people follow successive generations and retain a mental map.
 
-The public common Frontend library/CLI and selected Studio Run/Highlight/LLVM paths on Windows/x86-64 are existing foundations. The [9 November checkpoint](https://github.com/Graiphic/FROG/blob/main/docs/frontend-checkpoint-2026-11-09.json) identifies its own finite evidence. Source/profile documentation, function coverage, correctness and performance continue to develop.
+These are design objectives rather than a claim that graphics always make software easy to understand or that all change-review features are released. Human acceptance needs an attributable program revision and access to the behavior that matters.
 
-General source-language imports and additional deployment bridges remain prospective. Their direction follows the maintained roadmap and explicit compatibility contracts. A palette entry, a published source format or an illustrative target diagram alone does not qualify an executable integration.
+The calculator illustrates the abstraction: about 1,000 C/H lines correspond to an application whose architecture is accessible on one graphical page with navigable cases. The C source includes UI, parser and queue work. The comparison demonstrates a way to expose architecture; it does not establish a measured review advantage or an automatic importer. A walkthrough can enter a case, follow values with Highlight and check a change.
 
-## General strategy and dedicated collaborations
+## Human abstraction and machine efficiency
 
-Useful ideas from customer or research discussions can improve the common project when they address broader needs and justify their integration and maintenance cost. A partner's specific interest does not automatically become a core milestone.
+A graphical notation need not imply slow interpreted execution. FIR/IR should retain the precise types, effects and semantic information needed for faithful lowering and optimization by the selected compiler.
 
-The [general project philosophy](https://github.com/Graiphic/FROG/blob/main/Strategy/Visual-Programming-and-Human-Control.md) and [Heilmeier framing](https://github.com/Graiphic/FROG/blob/main/Strategy/Heilmeier/Readme.md) describe FROG and Studio as a whole. The Heilmeier questions cover useful programming, execution, maintenance, costs and evidence of practical benefit.
+Languages are abstractions with execution rules and runtime requirements. Algorithms, data structures, memory behavior, runtime costs, IR quality, backend configuration and hardware all affect efficiency. A shared compiler name alone cannot guarantee identical performance. [LLVM's frontend guidance](https://www.llvm.org/docs/Frontend/PerformanceTips.html) explains this dependence on IR construction and semantic information.
 
-Formal-verification adapters, a bounded queue-occupancy demonstrator and specialized resource/fault guarantees are potential collaboration work. They are collected in a separate [DARPA-oriented exploration](https://github.com/Graiphic/FROG/blob/main/Strategy/Research/DARPA-Collaboration-Options.md). No partnership, funding, selected implementation or delivery date is established by that note. The general project does not depend on undertaking that experiment.
+The existing foundation includes the common public Frontend library/CLI and selected Studio Run/Highlight/LLVM paths on Windows/x86-64. The [9 November checkpoint](https://github.com/Graiphic/FROG/blob/main/docs/frontend-checkpoint-2026-11-09.json) identifies finite evidence. Broader imports, change-review workflows and additional targets require their own implementation and qualification.
 
-Validation, tests and observations remain useful across the product. Their role is explained in the [supporting evidence guide](https://github.com/Graiphic/FROG/blob/main/Strategy/Inspection-and-Assurance.md); a particular research verification method does not become the philosophy of the whole project.
+## General project and separate collaborations
+
+The [project philosophy](https://github.com/Graiphic/FROG/blob/main/Strategy/Visual-Programming-and-Human-Control.md) and [Heilmeier framing](https://github.com/Graiphic/FROG/blob/main/Strategy/Heilmeier/Readme.md) now center human comprehension and acceptance of machine-generated software. Their evaluation concerns faithful representation, understanding of changes, valid correction, revision identity and efficient supported execution.
+
+The [supporting evidence guide](https://github.com/Graiphic/FROG/blob/main/Strategy/Inspection-and-Assurance.md) explains the role of the available checks. A readable overview is useful to investigation; each stronger conclusion needs the corresponding evidence.
+
+Formal-verification adapters, a bounded queue demonstrator and specialized embedded guarantees remain in the separate [DARPA-oriented collaboration note](https://github.com/Graiphic/FROG/blob/main/Strategy/Research/DARPA-Collaboration-Options.md). They do not determine the general philosophy, funding model or next required milestone. Any reusable contribution is assessed for wider value, architecture fit and maintenance cost.
 
 [Whitepaper series](../README.md) · [Studio whitepaper](../Graiphic%20Studio%20-%20Dataflow%20Programming%20for%20the%20AI%20Era/README.md) · [FROG foundation whitepaper](../FROG%20-%20Opening%20the%20Next%20Era%20of%20Graphical/Readme.md)
