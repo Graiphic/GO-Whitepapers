@@ -1,47 +1,41 @@
-# From inspectable software to scoped assurance
+# Visual programming, understanding and change
 
-**Editorial update · 11 November 2026**
+**Project clarification · 11 November 2026**
 
-This update connects the FROG foundation and Graiphic Studio whitepapers to the current research framing. The original PDFs and the reproduced Studio Appendix C remain dated publications; their bytes have not been revised. This page is a subsequent clarification, not a new whitepaper edition, implementation release or formal-verification result.
+This update connects the FROG and Graiphic Studio whitepapers to the general project philosophy. Original PDFs and reproduced appendices retain their edition dates and bytes. This page is an editorial clarification, not a new edition or implementation release.
 
-## The philosophy remains human control
+## The general project
 
-Graiphic's objective is continuity of informed human control from generated logic to executable results. FROG provides the open graphical dataflow language and representation contracts. Graiphic Studio is Graiphic's proprietary engineering environment built on that foundation. The intended workflow lets an engineer understand consequential behavior, assess the available evidence and make a valid correction that reaches the accepted executable.
+Graiphic develops a graphical programming environment for building software, understanding its behavior and making changes whose results can be checked. FROG provides the open language and representation contracts. Studio is the proprietary environment that integrates authoring, navigation, execution observation and supported deployment.
 
-The shared representation should serve human authoring, agent generation and future supported imports. Openness and machine-readable structure help integration; the value of the Studio experience depends on faithful mappings, useful interaction, maintained components and demonstrated results.
+The project serves everyday human programming and maintenance. Software inherited from a colleague or proposed by an AI tool creates the same need to connect relevant logic, actual behavior and a valid change. AI makes this need more visible while remaining one use case within a broader product.
 
-## Inspection, testing and proof are complementary
+## Ideas worth carrying into the product explanation
 
-A graph can reveal where to investigate. Tests and runtime Highlight establish what happened in specified executions. Formal verification can establish a stated property for a defined model or artifact, with explicit assumptions and trusted tools. None of these forms of evidence should silently stand for another.
+| Idea | General value |
+| --- | --- |
+| A visual dimension for understanding | Connections, hierarchy, shapes, labels and spatial organization help people navigate relationships and relevant detail. |
+| Understanding connected to intervention | An engineer can examine logic, observe a supported execution and return to the place where a correction belongs. |
+| A complete calculator walkthrough | Familiar inputs and outputs make event handling, a queue, explicit state and Highlight concrete. |
+| A representation usable by people and tools | The open FROG foundation supports compatible tooling and independent implementations. |
+| Program meaning separated from deployment | Compiler and target bridges have explicit responsibilities, supported profiles and evidence. |
 
-A program can be well typed and still implement the wrong requirement. A diagram can look clear while hiding a consequential effect. A proof can establish a bound while failing to capture the required service. A successful check of exported Rust does not automatically prove the exporter or a separate Studio LLVM binary. Hashes and source maps identify artifacts and associations; they do not establish semantic equivalence by themselves.
+The calculator comparison illustrates representation and navigation. Its C version includes UI, parser and queue work; the diagram overview exposes selected architecture with access to cases. Source-line count and screen area alone do not establish a review-speed advantage. Evaluate relevant tasks, correct understanding, successful changes and effort.
 
-## Current foundation
+## Existing foundation and development direction
 
-FROG syntax, serialization/profile documentation and Studio development continue. Selected functions already connect normal execution, Highlight and native LLVM compilation on Windows/x86-64. The common Frontend library and CLI are public, with an attributed [9 November source checkpoint](https://github.com/Graiphic/FROG/blob/main/docs/frontend-checkpoint-2026-11-09.json). These are bounded implementation facts, not complete language, device or target qualification.
+The public common Frontend library/CLI and selected Studio Run/Highlight/LLVM paths on Windows/x86-64 are existing foundations. The [9 November checkpoint](https://github.com/Graiphic/FROG/blob/main/docs/frontend-checkpoint-2026-11-09.json) identifies its own finite evidence. Source/profile documentation, function coverage, correctness and performance continue to develop.
 
-General imports from C, C++, Rust, JavaScript or Java and additional compiler/runtime targets remain prospective. No FROG/Studio-to-Verus integration, whole-language proof or measured comparative human-review advantage is established by this update.
+General source-language imports and additional deployment bridges remain prospective. Their direction follows the maintained roadmap and explicit compatibility contracts. A palette entry, a published source format or an illustrative target diagram alone does not qualify an executable integration.
 
-The public FROG [inspection and assurance direction](https://github.com/Graiphic/FROG/blob/main/Strategy/Inspection-and-Assurance.md) is the maintained detailed framing. Its [Heilmeier page](https://github.com/Graiphic/FROG/blob/main/Strategy/Heilmeier/Readme.md) now follows the eight official questions, with impact in question 4 and separate questions for risks, cost, duration and exams. Existing PDFs retain their historical organization.
+## General strategy and dedicated collaborations
 
-## A candidate experiment, not a completed integration
+Useful ideas from customer or research discussions can improve the common project when they address broader needs and justify their integration and maintenance cost. A partner's specific interest does not automatically become a core milestone.
 
-A deliberately limited example would model sequential admission and occupancy for a queue of capacity eight. It would require initialization, preservation of `0 <= n <= 8`, exact admission, exact increments/decrements, unchanged state on rejection and correct machine arithmetic. It would not verify FIFO contents, concurrency, real-time behavior, energy use or physical faults.
+The [general project philosophy](https://github.com/Graiphic/FROG/blob/main/Strategy/Visual-Programming-and-Human-Control.md) and [Heilmeier framing](https://github.com/Graiphic/FROG/blob/main/Strategy/Heilmeier/Readme.md) describe FROG and Studio as a whole. The Heilmeier questions cover useful programming, execution, maintenance, costs and evidence of practical benefit.
 
-All 18 admissible state/command pairs form a finite comparison set. A mutation `n < 8` to `n <= 8` exposes enqueue at eight producing nine. Rejecting every command must fail the functional requirement even though it preserves the bound. These are proposed checks; this editorial review has not implemented or executed a FROG verification prototype.
+Formal-verification adapters, a bounded queue-occupancy demonstrator and specialized resource/fault guarantees are potential collaboration work. They are collected in a separate [DARPA-oriented exploration](https://github.com/Graiphic/FROG/blob/main/Strategy/Research/DARPA-Collaboration-Options.md). No partnership, funding, selected implementation or delivery date is established by that note. The general project does not depend on undertaking that experiment.
 
-A restricted Rust/Verus export is a candidate to assess, alongside other suitable verification approaches. The [Verus guide](https://verus-lang.github.io/verus/guide/overview.html) describes verification of Rust against user-provided specifications and explicitly excludes verifying the verifier and Rust/LLVM compilers from its current objectives. Meaning preservation, supported evaluation rules, assumptions and result freshness therefore need their own treatment.
-
-## Test the human benefit fairly
-
-Compare graphical and textual workflows given the same requirements, contracts, assumptions and verifier information. Measure correct diagnosis, valid repair, elapsed effort, missed effects and mistaken confidence about the guarantee. Predetermine acceptance criteria. The calculator's overview and source-line counts illustrate representation; they are not a controlled study of review efficiency.
-
-The [PROVERS programme](https://www.darpa.mil/research/programs/pipelined-reasoning-of-verifiers-enabling-robust-systems) supplies relevant public research context on accessible formal methods and proof maintenance. Existing work in this area is a comparison baseline, not evidence of Graiphic endorsement, participation or funding.
-
-## Decisions still required
-
-A feasibility review must fix the semantic subset, tool choice, responsibilities, cost and exit criteria before implementation. No budget, development calendar, partner commitment or new product campaign is established here. Continue source stabilization and existing function/performance work under their owners; extend imports, verification and deployment only through explicit contracts and evidence.
-
-The research contribution to establish is whether executable dataflow helps people understand why a property stops holding and make a valid repair. It is not a claim that graphical inspection replaces mathematical assurance.
+Validation, tests and observations remain useful across the product. Their role is explained in the [supporting evidence guide](https://github.com/Graiphic/FROG/blob/main/Strategy/Inspection-and-Assurance.md); a particular research verification method does not become the philosophy of the whole project.
 
 [Whitepaper series](../README.md) · [Studio whitepaper](../Graiphic%20Studio%20-%20Dataflow%20Programming%20for%20the%20AI%20Era/README.md) · [FROG foundation whitepaper](../FROG%20-%20Opening%20the%20Next%20Era%20of%20Graphical/Readme.md)

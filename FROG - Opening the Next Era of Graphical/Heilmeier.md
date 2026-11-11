@@ -2,7 +2,7 @@
 
 **Archived strategic framing accompanying whitepaper 1.2.** The original text below retains its historical scope and headings. It is not the current implementation status or the current eight-question programme framing.
 
-Read the [11 November 2026 clarification](../Updates/2026-11-11-inspection-and-assurance.md) and the [maintained FROG Heilmeier framing](https://github.com/Graiphic/FROG/blob/main/Strategy/Heilmeier/Readme.md). In the current eight-question structure, impact accompanies question 4; risks, cost, duration and exams are questions 5–8. Historical references to a future first LLVM path do not supersede the selected native paths now available.
+Read the [11 November 2026 general philosophy clarification](../Updates/2026-11-11-inspection-and-assurance.md) and the [maintained FROG Heilmeier framing](https://github.com/Graiphic/FROG/blob/main/Strategy/Heilmeier/Readme.md). They describe the overall graphical programming project and keep dedicated collaboration options separate. The current eight-question structure places impact with question 4 and risks, cost, duration and exams in questions 5–8. Historical references to a future first LLVM path retain their original date.
 
 ---
 

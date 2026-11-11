@@ -1,4 +1,4 @@
-> **Strategy clarification — 11 November 2026:** Read the [subsequent inspection and assurance update](../Updates/2026-11-11-inspection-and-assurance.md) for current maturity, the proposed verification scope and evidence boundaries. The original whitepaper PDF remains unchanged and retains its own edition date.
+> **Project clarification — 11 November 2026:** Read the [general philosophy update](../Updates/2026-11-11-inspection-and-assurance.md) for visual programming, execution and maintenance, with dedicated collaboration ideas kept separately. The original whitepaper PDF remains unchanged and retains its own edition date.
 
 <div align="center" class="go-pages-link" data-render-target="github">
   <a href="https://graiphic.github.io/GO-Whitepapers/#/FROG%20-%20Opening%20the%20Next%20Era%20of%20Graphical/Readme">
