@@ -1,5 +1,8 @@
 - [GO Whitepaper Series](/)
 
+- **Updates**
+  - [Inspection and scoped assurance — 11 November 2026](/Updates/2026-11-11-inspection-and-assurance.md)
+
 - **Whitepapers**
   - [SOTA GO](/SOTA%20GO/README.md)
   - [GO HW](/GO%20HW%20%E2%80%94%20From%20Models%20to%20Systems/README.md)

@@ -1,3 +1,11 @@
+# Historical FROG Heilmeier framing
+
+**Archived strategic framing accompanying whitepaper 1.2.** The original text below retains its historical scope and headings. It is not the current implementation status or the current eight-question programme framing.
+
+Read the [11 November 2026 clarification](../Updates/2026-11-11-inspection-and-assurance.md) and the [maintained FROG Heilmeier framing](https://github.com/Graiphic/FROG/blob/main/Strategy/Heilmeier/Readme.md). In the current eight-question structure, impact accompanies question 4; risks, cost, duration and exams are questions 5–8. Historical references to a future first LLVM path do not supersede the selected native paths now available.
+
+---
+
 
 
 <p align="center">

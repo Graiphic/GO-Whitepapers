@@ -24,6 +24,10 @@
   </div>
 </div>
 
+## Current strategy clarification
+
+The [11 November 2026 update](Updates/2026-11-11-inspection-and-assurance.md) explains how informed human control, tests and scoped formal verification fit together. It states current implementation boundaries and a proposed bounded experiment. Original PDFs retain their edition dates; the update announces no verifier integration, measured review advantage or funding.
+
 ## Collection Overview
 
 Each whitepaper lives in its own folder with:

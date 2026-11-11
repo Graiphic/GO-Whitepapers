@@ -6,6 +6,8 @@
 
 This page reproduces Appendix C of the whitepaper. Chapter references and source numbers refer to the complete document.
 
+**Subsequent clarification — 11 November 2026:** The [inspection and assurance update](../Updates/2026-11-11-inspection-and-assurance.md) states current maturity and the proposed bounded verification direction. The [maintained FROG Heilmeier framing](https://github.com/Graiphic/FROG/blob/main/Strategy/Heilmeier/Readme.md) follows the eight official questions. The appendix reproduced below remains the October edition, not a report of a completed verifier integration or human-performance study.
+
 This appendix applies the eight questions of the Heilmeier framework to Graiphic’s programme. [31] It connects the industrial thesis to the proposed research, resources and evidence. The answers describe our direction and evaluation plan; they do not announce a funded programme, a delivery calendar or measured product results.
 
 ## 1 The objective in plain language
