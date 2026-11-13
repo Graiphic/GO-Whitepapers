@@ -28,6 +28,8 @@
 
 The [11 November 2026 philosophy clarification](Updates/2026-11-11-inspection-and-assurance.md) centers the human capacity to follow and validate machine-generated code: a structured FROG model serialized in `.frog`, graphical abstraction for comprehension, and FIR/IR for efficient supported execution. DARPA collaboration options remain separate. Original PDFs retain their edition dates.
 
+The [13 November capability note](Updates/2026-11-13-capability-evidence.md) connects that direction to the dated public Frontend receipt and a reproducible Source-to-execution example.
+
 ## Collection Overview
 
 Each whitepaper lives in its own folder with:

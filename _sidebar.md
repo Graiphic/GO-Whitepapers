@@ -2,6 +2,7 @@
 
 - **Updates**
   - [Human oversight of code generation — 11 November 2026](/Updates/2026-11-11-inspection-and-assurance.md)
+  - [Capability evidence — 13 November 2026](/Updates/2026-11-13-capability-evidence.md)
 
 - **Whitepapers**
   - [SOTA GO](/SOTA%20GO/README.md)
